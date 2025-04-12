@@ -1,0 +1,479 @@
+@font-face {
+    font-family: 'Cabinet Grotesk Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Regular'), url('assets/fonts/CabinetGrotesk-Regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Thin'), url('assets/fonts/CabinetGrotesk-Thin.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Extralight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Extralight'), url('assets/fonts/CabinetGrotesk-Extralight.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Light'), url('assets/fonts/CabinetGrotesk-Light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Medium'), url('assets/fonts/CabinetGrotesk-Medium.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Bold'), url('assets/fonts/CabinetGrotesk-Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Extrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Extrabold'), url('assets/fonts/CabinetGrotesk-Extrabold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cabinet Grotesk Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cabinet Grotesk Black'), url('assets/fonts/CabinetGrotesk-Black.woff') format('woff');
+}
+@font-face {
+    font-family: 'Benzin';
+    src: local('Benzin Regular'), local('Benzin-Regular'),
+    url('assets/fonts/Benzin-Regular.woff2') format('woff2'),
+    url('assets/fonts/Benzin-Regular.woff') format('woff'),
+    url('assets/fonts/Benzin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --fs-xxlg: 8.05vw;   /* 116px */
+    --fs-xlg: 5vw;       /* 72px */
+    --fs-lg: 2.78vw;     /* 40px */
+    --fs-md: 1.94vw;     /* 28px */
+    --fs-sm: 1.39vw;     /* 20px */
+    --fs-xsm: 1.25vw;    /* 18px */
+
+    --ff-text: 'Cabinet Grotesk', sans-serif;
+    --ff-accent: 'Benzin', sans-serif;
+
+    --color-grey: #9F9FA0;
+    --color-ligghtgrey: #B5B5B6;
+    --color-black: #0E1817;
+    --color-lightyellow: #FCFFCC;
+}
+.fs-xsm {
+    font-size: var(--fs-xsm);
+}
+.fs-sm {
+    font-size: var(--fs-sm);
+}
+.fs-md {
+    font-size: var(--fs-md);
+}
+.fs-lg {
+    font-size: var(--fs-lg);
+}
+.fs-xlg {
+    font-size: var(--fs-xlg);
+}
+.fs-xxlg {
+    font-size: var(--fs-xxlg);
+}
+.fw-700 {
+    font-weight: 700;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-300 {
+    font-weight: 300;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabinet Grotesk Light', sans-serif;
+    font-size: var(--fs-xsm);
+    color: #FFFFFF;
+    letter-spacing: -3%;
+}
+
+body {
+    margin: auto;
+    font-family: 'Benzin', sans-serif;
+}
+header {
+    height: 90vh;
+    background-color: #08090B;
+    background-image:
+            url("assets/images/header-bg-overlay.png"),
+            url("assets/images/header-bg-author.png"),
+            url("assets/images/bg-noise.png"),
+            url("assets/images/header-bg-right.png"),
+            url("assets/images/header-bg-left.png");
+    background-size:
+            100% 50vh,        /* overlay */
+            55vw 85.5vh,      /* author image */
+            100% 100%,        /* noise */
+            45vw 100%,        /* right */
+            80vw 100%;        /* left */
+    background-repeat: no-repeat;
+    background-position: bottom, 50% 110%, center, right top, left top;
+    padding: 40px 100px;
+}
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation .author > div,
+.navigation .author > div > span {
+    font-size: var(--fs-sm);
+    line-height: 100%;
+    font-weight: 400;
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+}
+.navigation .author > .lname {
+    padding-left: 25px;
+}
+.navigation .author > div > span {
+    color: var(--color-grey);
+}
+header nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+header nav a,
+header nav a > span {
+    letter-spacing: 1px;
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+header nav a:last-child {
+    font-size: 16px;
+    font-family: 'Benzin', sans-serif;
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 12px;
+    background: #FFFFFF;
+}
+header nav a > span {
+    font-size: 16px;
+    font-family: 'Benzin', sans-serif;
+    background: linear-gradient(90deg, #0c3c20, #c59c2f, #0c3c20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header .content {
+    display: flex;
+    height: 88%;
+    justify-content: space-between;
+}
+header .content .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+header .content .right {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    gap: 55px;
+}
+header .content .offer-clue {
+    color: var(--color-lightyellow);
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-sm);
+    font-weight: 300;
+    padding: 5px var(--fs-xsm);
+    width: fit-content;
+    text-transform: uppercase;
+    border: 1px solid rgba(237, 237, 237, 0.01);
+    background: linear-gradient(180deg, rgba(252, 255, 204, 0.23) -30.64%, rgba(252, 255, 204, 0.04) 100%);
+    backdrop-filter: blur(2px);
+    border-bottom: none;
+}
+header .content .offer {
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-xxlg);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%;
+    letter-spacing: -3.731px;
+    text-transform: uppercase;
+    background: linear-gradient(98deg, #FFF -0.63%, #FCFFCC 26.36%, #FFF 51.29%, #DFE3A8 71.34%, #FFF 103.3%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header .content .offer-text {
+    padding-top: 25px;
+}
+header .content .offer-text,
+header .content .offer-text span {
+    font-family: 'Cabinet Grotesk Light', sans-serif;
+    font-size: var(--fs-sm);
+    line-height: 110%;
+}
+header .content .offer-text span {
+    font-family: 'Cabinet Grotesk Medium', sans-serif;
+}
+header .content .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+header .content .benefits .title,
+header .content .benefits .title span {
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-xsm);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+}
+header .content .benefits .title span {
+    color: var(--color-grey);
+}
+header .content .benefits > .list {
+    padding: var(--fs-xsm);
+    border: 2px solid rgba(237, 237, 237, 0.01);
+    background: linear-gradient(180deg, rgba(174, 174, 174, 0.02) -30.64%, rgba(174, 174, 174, 0.00) 97.99%);
+    backdrop-filter: blur(15px);
+}
+header .content .benefits > .list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+header .content .benefits > .list ul li {
+    display: flex;
+    gap: var(--fs-xsm);
+    align-items: center;
+}
+header .content .benefits > .list span {
+    opacity: .65;
+    font-family: 'Cabinet Grotesk Light', sans-serif;
+    font-size: var(--fs-xsm);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+}
+header .content .benefits > .list img {
+    width: 17px;
+    height: 17px;
+}
+header .content .offer-btn {
+    padding: var(--fs-xsm);
+    background: url("assets/images/offer-btn-bg.png") lightgray 50% / cover no-repeat;
+    border: 3px solid rgb(220, 162, 162);
+}
+header .content .offer-btn a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+header .content .offer-btn span:first-child {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+header .content .offer-btn span:first-child img {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+header .content .offer-btn span {
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-md);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 33.296px */
+    letter-spacing: -0.832px;
+    text-transform: uppercase;
+}
+.offer-btn.mobile {
+    display: none;
+}
+@media only screen and (min-width: 2560px) and (max-width: 3839px) {
+
+}
+@media only screen and (min-width: 1981px) {
+
+}
+@media only screen and (min-width: 1440px) and (max-width: 2559px) {
+    :root {
+        --fs-xxlg: 6.05vw;
+        --fs-xlg: 3.5vw;
+        --fs-lg: 2vw;
+        --fs-md: 1.5vw;
+        --fs-sm: 1vw;
+        --fs-xsm: .9vw;
+    }
+    header {
+        background-image: url(assets/images/header-bg-overlay.png), url(assets/images/header-bg-author.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-right.png), url(assets/images/header-bg-left.png);
+        background-size: 100% 40vh, 50vw 90vh, 100% 100%, 45vw 100%, 80vw 100%;
+        background-repeat: no-repeat;
+        background-position: bottom, 50% 110%, center, right top, left top;
+        padding: 50px 150px;
+    }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+    header {
+        background-size: 100% 40vh, 55vw 90vh, 100% 100%, 45vw 100%, 80vw 100%;
+    }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1439px) {
+    :root {
+        --fs-xxlg: 6.05vw;
+        --fs-xlg: 3.5vw;
+        --fs-lg: 2vw;
+        --fs-md: 1.5vw;
+        --fs-sm: 1vw;
+        --fs-xsm: .9vw;
+    }
+}
+@media only screen and (min-width: 920px) and (max-width: 1200px) {
+    header {
+        background-size: 100% 40vh, 65vw 85vh, 100% 100%, 45vw 100%, 80vw 100%;
+        padding: 40px;
+    }
+    header .content {
+        height: 85%;
+    }
+    header .content .right {
+        gap: 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --fs-xxlg: 7.05vw;
+        --fs-xlg: 4.5vw;
+        --fs-lg: 3vw;
+        --fs-md: 2.5vw;
+        --fs-sm: 2vw;
+        --fs-xsm: 1.5vw;
+    }
+    header {
+        background-image: url(assets/images/header-bg-overlay.png), url(assets/images/header-bg-author.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-left.png), url(assets/images/header-bg-right.png);
+        background-size: 100% 40vh, 80vw 90vh, 100% 100%, 70vw 90%, 55vw 100%;
+        background-repeat: no-repeat;
+        background-position: bottom, 50% 110%, center, -35% 0, right top;
+        padding: 25px 25px;
+    }
+    header .content .right {
+        padding-right: 5px;
+        gap: 15vw;
+    }
+}
+@media only screen and (max-width: 767px) {
+    :root {
+        --fs-xxlg: 14.05vw;
+        --fs-xlg: 8.5vw;
+        --fs-lg: 6vw;
+        --fs-md: 5vw;
+        --fs-sm: 4vw;
+        --fs-xsm: 4.5vw;
+    }
+    header {
+        height: auto;
+        background-image: url(assets/images/header-bg-overlay.png), url(assets/images/header-bg-author.png), url(assets/images/bg-noise.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-left-mobile-2.png),url(assets/images/header-bg-right.png), url(assets/images/header-bg-left-mobile.png) ;
+        background-size: 100% 25vh, 110vw 75vh, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
+        background-repeat: no-repeat;
+        background-position: 0 60vh, 50% 15%, center 0, center 100%, 0 0, 143% 0, 0 0;
+        padding: 25px 25px;
+        background-color: #040404;
+    }
+    header nav a:not(:last-child) {
+        display: none;
+    }
+    header .content {
+        flex-direction: column;
+        padding-top: 50vh;
+    }
+    header .content .right {
+        padding-right: 0;
+        padding-top: 20px;
+    }
+    header .content .right .list span br {
+        display: none;
+    }
+    header .content .benefits > .list {
+        padding: var(--fs-xsm);
+        border: 1px solid rgb(237 237 237 / 6%);
+        background: linear-gradient(180deg, rgb(174 174 174 / 6%) -30.64%, rgb(174 174 174 / 0%) 97.99%);
+        backdrop-filter: blur(20px);
+        border-bottom: none;
+    }
+    header .content .offer-text {
+        padding-bottom: 25px;
+    }
+    header .content .offer-btn.mobile {
+        display: block;
+    }
+    .offer-btn:not(.mobile) {
+        display: none;
+    }
+    header .content .offer-btn a {
+
+        flex-direction: row-reverse;
+    }
+    header .content .offer-btn span:first-child img {
+        width: 10vw;
+        height: 10vw;
+    }
+    header .content .offer-btn span:first-child {
+        width: 10vw;
+    }
+    header .content .offer-btn span:last-child {
+        font-size: 6vw;
+        font-weight: bold;
+    }
+}
+@media only screen and (max-width: 480px) {
+
+}
+@media only screen and (max-width: 360px) {
+
+}
+
+
+
