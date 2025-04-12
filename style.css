@@ -137,11 +137,11 @@ header {
     height: 90vh;
     background-color: #08090B;
     background-image:
-            url("assets/images/header-bg-overlay.png"),
-            url("assets/images/header-bg-author.png"),
-            url("assets/images/bg-noise.png"),
-            url("assets/images/header-bg-right.png"),
-            url("assets/images/header-bg-left.png");
+            url("assets/images/header-bg-overlay.webp"),
+            url("assets/images/header-bg-author.webp"),
+            url("assets/images/bg-noise.webp"),
+            url("assets/images/header-bg-right.webp"),
+            url("assets/images/header-bg-left.webp");
     background-size:
             100% 50vh,        /* overlay */
             55vw 85.5vh,      /* author image */
@@ -227,6 +227,7 @@ header .content .offer-clue {
     border: 1px solid rgba(237, 237, 237, 0.01);
     background: linear-gradient(180deg, rgba(252, 255, 204, 0.23) -30.64%, rgba(252, 255, 204, 0.04) 100%);
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(15px);
     border-bottom: none;
 }
 header .content .offer {
@@ -277,6 +278,7 @@ header .content .benefits > .list {
     border: 2px solid rgba(237, 237, 237, 0.01);
     background: linear-gradient(180deg, rgba(174, 174, 174, 0.02) -30.64%, rgba(174, 174, 174, 0.00) 97.99%);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 header .content .benefits > .list ul {
     list-style: none;
@@ -304,7 +306,7 @@ header .content .benefits > .list img {
 header .content .offer-btn,
 .section-why .content .offer-btn {
     padding: var(--fs-xsm);
-    background: url("assets/images/offer-btn-bg.png") lightgray 50% / cover no-repeat;
+    background: url("assets/images/offer-btn-bg.webp") lightgray 50% / cover no-repeat;
     border: 3px solid rgb(220, 162, 162);
 }
 header .content .offer-btn a,
@@ -338,7 +340,7 @@ header .content .offer-btn span,
     display: none;
 }
 .section-why {
-    background-image: url("assets/images/section-why-bg.png"), url("assets/images/overlay-bg.png");
+    background-image: url("assets/images/section-why-bg.webp"), url("assets/images/overlay-bg.webp");
     background-size: 100% 100%, 10vh 100%;
     background-repeat: no-repeat;
     background-position: 0 0, 0 100%;
@@ -451,11 +453,13 @@ header .content .offer-btn span,
 .section-why .container .d {
     background: rgb(19 35 32 / 37%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
 }
 .section-why .container .b {
-    background: url("assets/images/bg-noise.png")#00000038 0 0;
+    background: url("assets/images/bg-noise.webp")#00000038 0 0;
     background-size: cover;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
 }
 .section-why .title {
     position: absolute;
@@ -523,8 +527,8 @@ header .content .offer-btn span,
         --fs-xsm: .9vw;
     }
     header {
-        background-image: url(assets/images/header-bg-overlay.png), url(assets/images/header-bg-author.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-right.png), url(assets/images/header-bg-left.png);
-        background-size: 100% 40vh, 50vw 90vh, 100% 100%, 45vw 100%, 80vw 100%;
+        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.webp), url(assets/images/header-bg-right.webp), url(assets/images/header-bg-left.webp);
+        background-size: 100% 40vh, contain, 100% 100%, 45vw 100%, 80vw 100%;
         background-repeat: no-repeat;
         background-position: bottom, 50% 110%, center, right top, left top;
         padding: 50px 150px;
@@ -532,7 +536,7 @@ header .content .offer-btn span,
 }
 @media only screen and (min-width: 1440px) and (max-width: 1680px) {
     header {
-        background-size: 100% 40vh, 55vw 90vh, 100% 100%, 45vw 100%, 80vw 100%;
+        background-size: 100% 40vh, contain, 100% 100%, 45vw 100%, 80vw 100%;
     }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1439px) {
@@ -547,7 +551,7 @@ header .content .offer-btn span,
 }
 @media only screen and (min-width: 920px) and (max-width: 1200px) {
     header {
-        background-size: 100% 40vh, 65vw 85vh, 100% 100%, 45vw 100%, 80vw 100%;
+        background-size: 100% 40vh, contain, 100% 100%, 45vw 100%, 80vw 100%;
         padding: 40px;
     }
     header .content {
@@ -555,6 +559,10 @@ header .content .offer-btn span,
     }
     header .content .right {
         gap: 25px;
+    }
+    .section-why .content .offer-btn {
+        width: 30vw;
+        left: calc(50% - 15vw);
     }
 }
 
@@ -568,8 +576,8 @@ header .content .offer-btn span,
         --fs-xsm: 1.5vw;
     }
     header {
-        background-image: url(assets/images/header-bg-overlay.png), url(assets/images/header-bg-author.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-left.png), url(assets/images/header-bg-right.png);
-        background-size: 100% 40vh, 80vw 90vh, 100% 100%, 70vw 90%, 55vw 100%;
+        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.webp), url(assets/images/header-bg-left.webp), url(assets/images/header-bg-right.webp);
+        background-size: 100% 40vh, contain, 100% 100%, 70vw 90%, 55vw 100%;
         background-repeat: no-repeat;
         background-position: bottom, 50% 110%, center, -35% 0, right top;
         padding: 25px 25px;
@@ -588,6 +596,10 @@ header .content .offer-btn span,
     .section-why .container .d > span > span {
         font-size: var(--fs-xsm);
     }
+    .section-why .content .offer-btn {
+        width: 35vw;
+        left: calc(50% - 17.5vw);
+    }
 }
 @media only screen and (max-width: 767px) {
     :root {
@@ -600,8 +612,8 @@ header .content .offer-btn span,
     }
     header {
         height: auto;
-        background-image: url(assets/images/header-bg-overlay.png), url(assets/images/header-bg-author.png), url(assets/images/bg-noise.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-left-mobile-2.png),url(assets/images/header-bg-right.png), url(assets/images/header-bg-left-mobile.png) ;
-        background-size: 100% 25vh, 110vw 75vh, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
+        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.webp), url(assets/images/bg-noise.webp), url(assets/images/header-bg-left-mobile-2.webp),url(assets/images/header-bg-right.webp), url(assets/images/header-bg-left-mobile.webp) ;
+        background-size: 100% 25vh, contain, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
         background-repeat: no-repeat;
         background-position: 0 60vh, 50% 15%, center 0, center 100%, 0 0, 143% 0, 0 0;
         padding: 25px 25px;
@@ -626,6 +638,7 @@ header .content .offer-btn span,
         border: 1px solid rgb(237 237 237 / 6%);
         background: linear-gradient(180deg, rgb(174 174 174 / 6%) -30.64%, rgb(174 174 174 / 0%) 97.99%);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(15px);
         border-bottom: none;
     }
     header .content .offer {
@@ -666,7 +679,7 @@ header .content .offer-btn span,
         display: none;
     }
     .section-why {
-        background-image: url(assets/images/section-why-bg-mobile.png);
+        background-image: url(assets/images/section-why-bg-mobile.webp);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -721,8 +734,15 @@ header .content .offer-btn span,
         border-top-left-radius: 0 !important;
     }
 }
-@media only screen and (max-width: 480px) {
-
+@media only screen and (max-width: 600px) {
+    header {
+        background-size: 100% 25vh, contain, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    header {
+        background-size: 100% 25vh, contain, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
+    }
 }
 @media only screen and (max-width: 360px) {
 
