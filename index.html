@@ -20,6 +20,24 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"/>
     <title>TDMC METHOD</title>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '594835316934617');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=594835316934617&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 <body>
     <header>
@@ -30,9 +48,9 @@
             </div>
             <nav>
                 <a href="">Home</a>
-                <a href="">Why</a>
-                <a href="">Join</a>
-                <a href="">JOIN <span>NOW</span></a>
+                <a href="#section-why">Why</a>
+                <a href="#section-join">Join</a>
+                <a href="#waitlist-form">JOIN <span>NOW</span></a>
             </nav>
         </div>
         <div class="content">
@@ -57,25 +75,26 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <li><img src="assets/images/list-item.png" alt=""><span>Find your unique <br>style</span></li>
-                            <li><img src="assets/images/list-item.png" alt=""><span>Create a portfolio <br>that sells</span></li>
-                            <li><img src="assets/images/list-item.png" alt=""><span>Feel confident on <br>the shootings</span></li>
-                            <li><img src="assets/images/list-item.png" alt=""><span>Gain followers in <br>social media</span></li>
-                            <li><img src="assets/images/list-item.png" alt=""><span>Monetize your creativity <br>for a worthy income</span></li>
+                            <li><img src="assets/images/list-item.webp" alt=""><span>Find your unique <br>style</span></li>
+                            <li><img src="assets/images/list-item.webp" alt=""><span>Create a portfolio <br>that sells</span></li>
+                            <li><img src="assets/images/list-item.webp" alt=""><span>Feel confident on <br>the shootings</span></li>
+                            <li><img src="assets/images/list-item.webp" alt=""><span>Gain followers in <br>social media</span></li>
+                            <li><img src="assets/images/list-item.webp" alt=""><span>Monetize your creativity <br>for a worthy income</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="offer-btn">
-                    <a href="">
-                      <span><img src="assets/images/arrow-link.png" alt=""></span>
+                    <a href="#waitlist-form">
+                      <span><img src="assets/images/arrow-link.webp" alt=""></span>
                       <span>Join the <br>waitlist now</span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <section class="section-why">
-        <img src="assets/images/overlay-bg.png" alt="" class="shade reversed">
+    <section class="section-why" id="section-why">
+        <img src="assets/images/section-join-shade.png" alt="" class="shade">
+        <img src="assets/images/section-join-shade.png" alt="" class="shade reversed">
         <div class="title">
             <div>Why Join</div>
             <span>the</span>
@@ -155,22 +174,21 @@
                 <div class="empty10"></div>
             </div>
             <div class="offer-btn">
-                <a href="">
-                    <span><img src="assets/images/arrow-link.png" alt=""></span>
+                <a href="#waitlist-form">
+                    <span><img src="assets/images/arrow-link.webp" alt=""></span>
                     <span>Join the <br>waitlist now</span>
                 </a>
             </div>
-            <img src="assets/images/overlay-bg.png" alt="" class="shade">
             <div class="offer-btn mobile">
-                <a href="">
-                    <span><img src="assets/images/arrow-link.png" alt=""></span>
+                <a href="#waitlist-form">
+                    <span><img src="assets/images/arrow-link.webp" alt=""></span>
                     <span>Join the <br>waitlist now</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="section-join">
+    <section class="section-join" id="section-join">
         <img src="assets/images/section-join-shade.png" alt="" class="shade">
         <div class="content">
             <div class="swiper feedback-swiper">
@@ -224,7 +242,7 @@
 
                         <label>
                             Phone number
-                            <input id="phone" type="tel" name="Phone" pattern="^\+[1-9]\d{7,14}$" required/>
+                            <input id="phone" type="tel" name="Phone" pattern="^(\+?\d{10,15})$" required/>
                         </label>
 
                         <label>

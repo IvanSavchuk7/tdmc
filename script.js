@@ -52,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     arrowOuter.style.background = "none";
                     // Change the text
                     submitBtn.childNodes[submitBtn.childNodes.length - 1].textContent = "Thanks joining us!";
-
+                    setTimeout(() => {
+                        window.location.href = "https://chat.whatsapp.com/B6v2ArxNzgPGeYFizEWq7H";
+                    }, 500);
                     // Optional: disable the button or style it
                     submitBtn.disabled = true;
                     submitBtn.classList.add("submitted");
@@ -62,5 +64,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Error:", error);
                 alert("Something went wrong. Please try again later.");
             });
+    });
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
     });
 });
