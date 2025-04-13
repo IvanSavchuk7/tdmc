@@ -537,6 +537,8 @@ header .content .offer-btn span,
     height: 56px;
     width: 56px;
     top: 80% !important;
+    z-index: 3000;
+    position: absolute;
 }
 .feedback-swiper .swiper-button-next img,
 .feedback-swiper .swiper-button-prev img {
@@ -668,7 +670,7 @@ header .content .offer-btn span,
 .section-join .title {
     position: absolute;
     left: 5vw;
-    top: 5%;
+    top: 10vh;
     z-index: 1000;
 }
 .section-join .title > div {
@@ -683,7 +685,17 @@ header .content .offer-btn span,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.section-join .noise {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+}
+.submit-btn:active {
+    transform: translateX(0.1em) translateY(0.1em);
+}
 @media only screen and (min-width: 2560px) and (max-width: 3839px) {
 
 }
@@ -737,6 +749,15 @@ header .content .offer-btn span,
         width: 30vw;
         left: calc(50% - 15vw);
     }
+    .form-wrapper {
+        bottom: 5vh;
+    }
+    .section-join .title {
+        top: 5vh;
+    }
+    .section-join .title > div {
+        font-size: var(--fs-md);
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -772,6 +793,41 @@ header .content .offer-btn span,
     .section-why .content .offer-btn {
         width: 35vw;
         left: calc(50% - 17.5vw);
+    }
+    .waitlist-form {
+        gap: 15px;
+        padding: 20px;
+        max-width: 550px;
+        width: 35vw;
+    }
+    .waitlist-form label {
+        font-size: var(--fs-xsm);
+    }
+    .submit-btn {
+        padding: 5px;
+    }
+    .swiper-pagination {
+        width: 35% !important;
+        left: 56% !important;
+    }
+    .feedback-swiper .swiper-button-next, .feedback-swiper .swiper-button-prev {
+        width: 48px;
+        height: 48px;
+    }
+    .form-wrapper {
+        bottom: 1vh;
+    }
+    .section-join .title {
+        top: 3vh;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .section-join .title,
+    .form-wrapper {
+        left: 3vw;
+    }
+    .section-join .title > div {
+        font-size: var(--fs-md);
     }
 }
 @media only screen and (max-width: 767px) {
@@ -906,15 +962,89 @@ header .content .offer-btn span,
         border-top-right-radius: 0 !important;
         border-top-left-radius: 0 !important;
     }
+    .section-join {
+        background: black;
+    }
+    .form-wrapper,
+    .section-join .title {
+        padding-bottom: 25px;
+        position: initial;
+    }
+    .waitlist-form {
+        width: 70%;
+        min-width: 400px;
+    }
+    .section-join .title > div {
+        text-align: center;
+        padding-top: 50px;
+    }
+    .section-join .wrapper {
+        background-image:
+        url("assets/images/bgbg.png");
+        background-size: cover;
+        background-position: center, left;
+    }
+    .submit-btn {
+        font-size: 18px;
+    }
+    .feedback-swiper .swiper-button-next, .feedback-swiper .swiper-button-prev {
+        width: 42px !important;
+        height: 42px !important;
+        top: calc(98% - 24px) !important;
+    }
+    .swiper-button-prev {
+        left: calc(50% - (56px)) !important;
+    }
+    .swiper-button-next {
+        right: calc(50% - 56px) !important;
+    }
+    .swiper-pagination {
+        bottom: 16% !important;
+        width: 50% !important;
+        left: 25% !important;
+    }
+    .swiper-pagination-bullet {
+        height: 8px !important;
+    }
 }
 @media only screen and (max-width: 600px) {
     header {
         background-size: 100% 25vh, contain, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
     }
+    .feedback-swiper .swiper-slide img:first-child {
+        aspect-ratio: 4/7;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 70% 50%;
+    }
+    .feedback-swiper .swiper-slide.first img:first-child {
+        object-position: 70% 50%;
+    }
+    .feedback-swiper .swiper-slide.second img:first-child,
+    .feedback-swiper .swiper-slide.fourth img:first-child
+    {
+        object-position: 5% center;
+    }
+    .feedback-swiper .swiper-slide.third img:first-child {
+        object-position: 48% center;
+    }
+    .feedback-swiper .swiper-slide.fifth img:first-child {
+        object-position: 60% center;
+    }
+    .swiper-pagination {
+        bottom: 12% !important;
+        width: 50% !important;
+        left: 25% !important;
+    }
 }
 @media only screen and (max-width: 420px) {
     header {
         background-size: 100% 25vh, contain, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
+    }
+    .waitlist-form {
+        width: 90%;
+        min-width: 320px;
     }
 }
 @media only screen and (max-width: 360px) {
