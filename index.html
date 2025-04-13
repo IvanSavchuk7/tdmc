@@ -14,6 +14,12 @@
     <link rel="manifest" href="assets/site.webmanifest">
     <meta name="theme-color" content="#000000">
     <link rel="shortcut icon" href="assets/android-chrome-192x192.png" type="image/x-icon">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"/>
+    <script src="script.js" defer></script>
     <title>TDMC METHOD</title>
 </head>
 <body>
@@ -169,5 +175,82 @@
             </div>
         </div>
     </section>
+
+    <section class="section-join">
+        <div class="content">
+            <div class="swiper feedback-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="name font-size-sm font-weight-semibold"><img src="assets/images/collage-img-1.png" alt="feedback-image"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="name font-size-sm font-weight-semibold"><img src="assets/images/collage-img-2.png" alt="feedback-image"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="name font-size-sm font-weight-semibold"><img src="assets/images/collage-img-3.png" alt="feedback-image"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="name font-size-sm font-weight-semibold"><img src="assets/images/collage-img-4.webp" alt="feedback-image"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="name font-size-sm font-weight-semibold"><img src="assets/images/collage-img-5.png" alt="feedback-image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-prev"><img src="assets/images/collage-arrow-white.png" alt="arrow-left"></div>
+                    <div class="swiper-button-next"><img src="assets/images/collage-arrow-black.png" alt="arrow-right"></div>
+                </div>
+            </div>
+            <div class="title"><div>I’ll show you <br>exactly how to <br>take photos like <br>this — step by step</div></div>
+            <div class="form-wrapper">
+                <form class="waitlist-form">
+                    <label>
+                        First name
+                        <input type="text" name="firstName" placeholder="">
+                    </label>
+
+                    <label>
+                        Phone number
+                        <input id="phone" type="tel" name="phone" />
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="">
+                    </label>
+
+                    <label>
+                        Instagram
+                        <input type="text" name="instagram" placeholder="">
+                    </label>
+
+                    <button type="submit" class="submit-btn">
+                        <div class="arrow">
+                            <img src="assets/images/arrow-link.webp" alt="">
+                        </div>
+                        JOIN THE WAITLIST NOW
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 </body>
 </html>
