@@ -349,6 +349,9 @@ header .content .offer-btn span,
     height: 100vh;
     position: relative;
 }
+.section-join .shade.mobile {
+    display: none;
+}
 .section-why .container.desktop {
     width: 100%;
     height: 99vh;
@@ -512,9 +515,45 @@ header .content .offer-btn span,
     display: none;
 }
 .section-join {
+    background-color: black;
+    padding-top: 50px;
     position: relative;
 }
+.section-join > .shade {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    z-index: 10;
+}
+.section-join > .shade:first-child {
+    left: 0;
+    top: 0;
+}
+.section-join > .shade:last-child {
+    left: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+    height: 15vh;
+}
+.section-join .wrapper .shade {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.section-join .swiper > .shade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 14vh;
+    width: 100%;
+    z-index: 10;
+    transform: rotate(180deg);
+}
 .section-join .feedback-swiper {
+    position: relative;
 }
 .section-join .feedback-swiper .swiper-slide {
     background: var(--color-grey);
@@ -586,8 +625,8 @@ header .content .offer-btn span,
     z-index: 1000;
 }
 .waitlist-form {
-    max-width: 450px;
-    width: 30vw;
+    max-width: 550px;
+    width: 35vw;
     z-index: 2;
     margin: 0 auto;
     display: flex;
@@ -612,7 +651,7 @@ header .content .offer-btn span,
 .waitlist-form input,
 .waitlist-form input:active {
     width: 100%;
-    padding: 5px 15px;
+    padding: 10px 15px;
     border: 1px solid rgba(255, 255, 255, 0.20);
     background: rgba(255, 255, 255, 0.07);
     border-radius: 0;
@@ -670,7 +709,7 @@ header .content .offer-btn span,
 .section-join .title {
     position: absolute;
     left: 5vw;
-    top: 10vh;
+    top: 20vh;
     z-index: 1000;
 }
 .section-join .title > div {
@@ -723,6 +762,9 @@ header .content .offer-btn span,
     header {
         background-size: 100% 40vh, contain, 100% 100%, 45vw 100%, 80vw 100%;
     }
+    .waitlist-form {
+        width: 30vw;
+    }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1439px) {
     :root {
@@ -732,6 +774,12 @@ header .content .offer-btn span,
         --fs-md: 1.5vw;
         --fs-sm: 1vw;
         --fs-xsm: .9vw;
+    }
+    .waitlist-form input {
+        padding: 5px 10px;
+    }
+    .waitlist-form {
+        width: 30vw;
     }
 }
 @media only screen and (min-width: 920px) and (max-width: 1200px) {
@@ -753,11 +801,22 @@ header .content .offer-btn span,
         bottom: 5vh;
     }
     .section-join .title {
-        top: 5vh;
+        top: 10vh;
     }
     .section-join .title > div {
         font-size: var(--fs-md);
     }
+    .waitlist-form input {
+        padding: 5px 10px;
+    }
+    .waitlist-form {
+        width: 30vw;
+    }
+    .swiper-pagination {
+        width: 35% !important;
+        left: 55% !important;
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -818,7 +877,10 @@ header .content .offer-btn span,
         bottom: 1vh;
     }
     .section-join .title {
-        top: 3vh;
+        top: 10vh;
+    }
+    .waitlist-form input {
+        padding: 5px 10px;
     }
 }
 @media only screen and (max-width: 850px) {
@@ -828,6 +890,12 @@ header .content .offer-btn span,
     }
     .section-join .title > div {
         font-size: var(--fs-md);
+    }
+    .waitlist-form input {
+        padding: 5px 10px;
+    }
+    .waitlist-form input {
+        padding: 5px 10px;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -858,6 +926,7 @@ header .content .offer-btn span,
     header .content .right {
         padding-right: 0;
         padding-top: 20px;
+        flex-direction: column-reverse;
     }
     header .content .right .list span br {
         display: none;
@@ -871,7 +940,7 @@ header .content .offer-btn span,
         border-bottom: none;
     }
     header .content .offer {
-        padding-top: 20px;
+        padding-top: 0 !important;
     }
     header .content .offer-text {
         padding-top: 20px;
@@ -880,14 +949,14 @@ header .content .offer-btn span,
     header .content .offer-text br {
         display: none;
     }
+    header .content .offer-btn a {
+        flex-direction: row-reverse;
+    }
     .section-why .content .offer-btn.mobile {
         display: block;
         position: initial;
         width: 90%;
         margin: 25px auto;
-    }
-    .offer-btn:not(.mobile) {
-        display: none;
     }
     .offer-btn a {
         justify-content: space-between;
@@ -979,6 +1048,7 @@ header .content .offer-btn span,
         padding-top: 50px;
     }
     .section-join .wrapper {
+        padding-top: 50px;
         background-image:
         url("assets/images/bgbg.png");
         background-size: cover;
@@ -990,7 +1060,7 @@ header .content .offer-btn span,
     .feedback-swiper .swiper-button-next, .feedback-swiper .swiper-button-prev {
         width: 42px !important;
         height: 42px !important;
-        top: calc(98% - 24px) !important;
+        top: calc(100% - 24px) !important;
     }
     .swiper-button-prev {
         left: calc(50% - (56px)) !important;
@@ -1005,6 +1075,24 @@ header .content .offer-btn span,
     }
     .swiper-pagination-bullet {
         height: 8px !important;
+    }
+    .section-why .content .offer-btn:not(.mobile) {
+        display: none;
+    }
+    header .content .offer-btn span, .section-why .content .offer-btn span {
+        font-size: var(--fs-lg);
+    }
+    .waitlist-form input {
+        padding: 10px 10px;
+    }
+    .section-join .shade.mobile {
+        display: block;
+    }
+    .section-join .wrapper {
+        position: relative;
+    }
+    .section-join .shade.mobile {
+        display: block;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -1033,7 +1121,7 @@ header .content .offer-btn span,
         object-position: 60% center;
     }
     .swiper-pagination {
-        bottom: 12% !important;
+        bottom: 9% !important;
         width: 50% !important;
         left: 25% !important;
     }
@@ -1045,6 +1133,26 @@ header .content .offer-btn span,
     .waitlist-form {
         width: 90%;
         min-width: 320px;
+    }
+    .section-why .container .a > span:first-child, .section-why .container .b > span:first-child, .section-why .container .c > span:first-child, .section-why .container .d > span:first-child {
+        font-size: 28px;
+    }
+    .section-why .container span,
+    .section-why .container .a > span > span, .section-why .container .b > span > span, .section-why .container .c > span > span, .section-why .container .d > span > span {
+        font-size: 18px;
+    }
+    .section-why .title {
+        left: 5%;
+        top: 10vh;
+    }
+    header {
+        padding: 25px 25px 75px 25px;
+    }
+    .section-why .title > div {
+        font-size: 33px;
+    }
+    .section-join > .shade:last-child {
+        height: 10vh;
     }
 }
 @media only screen and (max-width: 360px) {
