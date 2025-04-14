@@ -24,12 +24,8 @@ const iti = window.intlTelInput(input, {
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
     nationalMode: false,
 });
-const form = document.getElementById("waitlist-form");
-const thankYou = document.getElementById("thank-you");
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("waitlist-form");
-    const thankYou = document.getElementById("thank-you");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -39,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const loader = submitBtn.querySelector(".dot-spinner");
         const arrowOuter = submitBtn.querySelector(".arrow");
         arrowDiv.style.display = "none";
-        arrowOuter.style.background = "none";
+        arrowOuter.style.display = "none";
         submitBtn.childNodes[submitBtn.childNodes.length - 1].textContent = "";
         loader.style.display = "block";
 
