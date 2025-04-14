@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        fetch("https://script.google.com/macros/s/AKfycbzqA2npUUzi_IsiD9U0A3SBB1VkaUdQib_pUhaql-q7IPvFDI-eWHhAEK0sh8tNbqlY/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbzQnAbGx9k7TYnq7CFn-r_KPyNn-8Ig2QO5fIxkaPRz9ZQX815ZEcdd2cF23chXYg/exec", {
             method: "POST",
             body: formData
         })
