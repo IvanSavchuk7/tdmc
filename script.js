@@ -22,7 +22,7 @@ const iti = window.intlTelInput(input, {
     initialCountry: "us",
     preferredCountries: ["ua", "us", "pl"],
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-    nationalMode: false, // ✅ this ensures +380 appears in the input
+    nationalMode: false,
 });
 const form = document.getElementById("waitlist-form");
 const thankYou = document.getElementById("thank-you");
@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const submitBtn = document.getElementById("submit-btn");
         submitBtn.disabled = true; //
+        const arrowDiv = submitBtn.querySelector(".arrow img");
+        const loader = submitBtn.querySelector(".dot-spinner");
+        const arrowOuter = submitBtn.querySelector(".arrow");
+        arrowDiv.style.display = "none";
+        arrowOuter.style.background = "none";
+        submitBtn.childNodes[submitBtn.childNodes.length - 1].textContent = "";
+        loader.style.display = "block";
 
         const formData = new FormData(form);
 
@@ -46,19 +53,17 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 if (data.result === "success") {
                     const submitBtn = document.getElementById("submit-btn");
+                    submitBtn.style.display = "flex";
+                    submitBtn.style.alignItems = "center";
+                    submitBtn.style.justifyContent = "center";
 
-                    // Change the image
-                    const arrowDiv = submitBtn.querySelector(".arrow img");
-                    const arrowOuter = submitBtn.querySelector(".arrow");
+                    arrowDiv.style.display = "block";
+                    loader.style.display = "none";
                     arrowDiv.src = "assets/images/checkmark.svg"; // ✅ Your checkmark icon
                     arrowOuter.style.background = "none";
-                    // Change the text
-                    submitBtn.childNodes[submitBtn.childNodes.length - 1].textContent = "Thanks joining us!";
                     setTimeout(() => {
                         window.location.href = "https://chat.whatsapp.com/B6v2ArxNzgPGeYFizEWq7H";
                     }, 500);
-                    // Optional: disable the button or style it
-                    submitBtn.disabled = true;
                     submitBtn.classList.add("submitted");
                 }
             })
