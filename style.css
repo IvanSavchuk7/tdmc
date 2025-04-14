@@ -745,7 +745,7 @@ header .content .offer-btn span,
     justify-content: center;
     height: 32px;
     width: 32px;
-    margin-left: calc(50% - 32px);
+    margin: auto;
 }
 
 .dot-spinner__dot {
@@ -883,7 +883,8 @@ header .content .offer-btn span,
         background-size: 100% 40vh, contain, 100% 100%, 45vw 100%, 80vw 100%;
     }
     .waitlist-form {
-        width: 30vw;
+        width: 32vw;
+        max-width: 32vw;
     }
     .form-wrapper {
         bottom: 4vh;
