@@ -139,7 +139,7 @@ header {
     background-image:
             url("assets/images/header-bg-overlay.webp"),
             url("assets/images/header-bg-author.webp"),
-            url("assets/images/bg-noise.webp"),
+            url("assets/images/bg-noise.png"),
             url("assets/images/header-bg-right.webp"),
             url("assets/images/header-bg-left.webp");
     background-size:
@@ -459,7 +459,7 @@ header .content .offer-btn span,
     -webkit-backdrop-filter: blur(15px);
 }
 .section-why .container .b {
-    background: url("assets/images/bg-noise.webp")#00000038 0 0;
+    background: url("assets/images/bg-noise.png")#00000038 0 0;
     background-size: cover;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(15px);
@@ -871,7 +871,7 @@ header .content .offer-btn span,
         --fs-xsm: .9vw;
     }
     header {
-        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.webp), url(assets/images/header-bg-right.webp), url(assets/images/header-bg-left.webp);
+        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.png), url(assets/images/header-bg-right.webp), url(assets/images/header-bg-left.webp);
         background-size: 100% 40vh, contain, 100% 100%, 45vw 100%, 80vw 100%;
         background-repeat: no-repeat;
         background-position: bottom, 50% 110%, center, right top, left top;
@@ -998,7 +998,7 @@ header .content .offer-btn span,
         --fs-xsm: 1.5vw;
     }
     header {
-        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.webp), url(assets/images/header-bg-left.webp), url(assets/images/header-bg-right.webp);
+        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.png), url(assets/images/header-bg-left.webp), url(assets/images/header-bg-right.webp);
         background-size: 100% 40vh, contain, 100% 100%, 70vw 90%, 55vw 100%;
         background-repeat: no-repeat;
         background-position: bottom, 50% 110%, center, -35% 0, right top;
@@ -1094,7 +1094,7 @@ header .content .offer-btn span,
     }
     header {
         height: auto;
-        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.webp), url(assets/images/bg-noise.webp), url(assets/images/header-bg-left-mobile-2.webp),url(assets/images/header-bg-right.webp), url(assets/images/header-bg-left-mobile.webp) ;
+        background-image: url(assets/images/header-bg-overlay.webp), url(assets/images/header-bg-author.webp), url(assets/images/bg-noise.png), url(assets/images/bg-noise.png), url(assets/images/header-bg-left-mobile-2.webp),url(assets/images/header-bg-right.webp), url(assets/images/header-bg-left-mobile.webp) ;
         background-size: 100% 25vh, contain, 100% 50%, 100% 50%, 80vw 83vh, 70vw 60%, 100% 50%;
         background-repeat: no-repeat;
         background-position: 0 60vh, 50% 15%, center 0, center 100%, 0 0, 143% 0, 0 0;
