@@ -889,6 +889,9 @@ header .content .offer-btn span,
     .form-wrapper {
         bottom: 4vh;
     }
+    header .content .right {
+        gap: 30px;
+    }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1439px) {
     header {
