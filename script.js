@@ -86,3 +86,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if device is mobile
+    if (window.innerWidth <= 768) {
+        window.scrollTo(0, 20);
+    }
+});
