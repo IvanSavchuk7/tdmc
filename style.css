@@ -805,6 +805,22 @@ header .content .offer-btn span,
     .form-wrapper {
         bottom: 6vh;
     }
+    header .content .right {
+        align-items: flex-end;
+    }
+    header .content .benefits {
+        width: fit-content;
+    }
+    header .content .offer-btn a {
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+    header .content .offer-btn span:first-child {
+        width: fit-content;
+    }
+    header .content .offer-btn a span:last-child br {
+        display: none;
+    }
 }
 @media only screen and (min-width: 920px) and (max-width: 1200px) {
     header {
@@ -847,6 +863,23 @@ header .content .offer-btn span,
     .form-wrapper {
         bottom: 3vh;
     }
+    header .content .right {
+        align-items: flex-end;
+    }
+    header .content .benefits {
+        width: fit-content;
+    }
+    header .content .offer-btn a {
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+    header .content .offer-btn span:first-child {
+        width: fit-content;
+    }
+    header .content .offer-btn a span:last-child br {
+        display: none;
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 919px) {
@@ -967,7 +1000,7 @@ header .content .offer-btn span,
     }
     header .content {
         flex-direction: column;
-        padding-top: 50vh;
+        padding-top: 40vh;
     }
     header .content .right {
         padding-right: 0;
@@ -999,7 +1032,7 @@ header .content .offer-btn span,
         flex-direction: row-reverse;
     }
     header .content .offer-clue {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
     .section-why .content .offer-btn.mobile {
         display: block;
@@ -1083,14 +1116,27 @@ header .content .offer-btn span,
     .section-join {
         background: black;
     }
-    .form-wrapper,
-    .section-join .title {
+    .form-wrapper {
         padding-bottom: 25px;
         position: initial;
+    }
+    .section-join .title {
+        top: -2vh;
     }
     .waitlist-form {
         width: 70%;
         min-width: 480px;
+        gap: 40px;
+    }
+    .waitlist-form .submit-btn {
+        padding: 15px 10px;
+    }
+    .submit-btn .arrow {
+        width: 32px;
+        height: 32px;
+    }
+    .iti__country-list {
+        width: initial !important;
     }
     .section-join .title > div {
         text-align: center;
@@ -1156,6 +1202,9 @@ header .content .offer-btn span,
     .section-join .title > div br {
         display: none;
     }
+    .section-why .container .a > span:first-child, .section-why .container .b > span:first-child, .section-why .container .c > span:first-child, .section-why .container .d > span:first-child {
+        font-size: 35px;
+    }
 }
 @media only screen and (max-width: 600px) {
     header {
@@ -1208,7 +1257,7 @@ header .content .offer-btn span,
         min-width: 360px;
     }
     .section-why .container .a > span:first-child, .section-why .container .b > span:first-child, .section-why .container .c > span:first-child, .section-why .container .d > span:first-child {
-        font-size: 28px;
+        font-size: 35px;
     }
     .section-why .container span,
     .section-why .container .a > span > span, .section-why .container .b > span > span, .section-why .container .c > span > span, .section-why .container .d > span > span {
@@ -1232,6 +1281,21 @@ header .content .offer-btn span,
     }
     .submit-btn {
         font-size: 15px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    header {
+        padding: 15px 15px 75px 15px;
+    }
+    header .content {
+        padding-top: 45vh;
+    }
+    header .content .offer-text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    header .content .right {
+        padding-top: 10px;
     }
 }
 @media only screen and (max-width: 360px) {

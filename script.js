@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+        const submitBtn = document.getElementById("submit-btn");
+        submitBtn.disabled = true; //
 
         const formData = new FormData(form);
 
