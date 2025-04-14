@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     arrowDiv.src = "assets/images/checkmark.svg"; // ✅ Your checkmark icon
                     arrowOuter.style.background = "none";
                     setTimeout(() => {
-                        window.location.href = "https://chat.whatsapp.com/B6v2ArxNzgPGeYFizEWq7H";
+                        // window.location.href = "https://tdmceducation.com/join";
+                        window.location.href = "join/index.html";
                     }, 500);
                     submitBtn.classList.add("submitted");
                 }

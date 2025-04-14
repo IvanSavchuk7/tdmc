@@ -1330,7 +1330,9 @@ header .content .offer-btn span,
     .feedback-swiper .swiper-slide.first img:first-child {
         object-position: 70% 50%;
     }
-    .feedback-swiper .swiper-slide.second img:first-child,
+    .feedback-swiper .swiper-slide.second img:first-child {
+        object-position: 65% center;
+    }
     .feedback-swiper .swiper-slide.fourth img:first-child
     {
         object-position: 5% center;
