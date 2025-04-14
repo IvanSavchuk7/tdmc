@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     submitBtn.style.display = "flex";
                     submitBtn.style.alignItems = "center";
                     submitBtn.style.justifyContent = "center";
+                    arrowOuter.style.display = "block";
+                    arrowOuter.style.background = "none";
 
                     arrowDiv.style.display = "block";
                     loader.style.display = "none";
