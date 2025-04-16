@@ -1,0 +1,654 @@
+
+.shade {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    bottom: -5vh;
+    left: 0;
+    background: #000000;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.76) 50%, rgba(0, 0, 0, 1) 70%);
+}
+section.benefits {
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/waitlist/section-benefits-bg.webp");
+    background-size:
+            100% 100%,
+            110% 120%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 75px 0;
+    position: relative;
+}
+section.benefits > .title h2,
+section.for > .title h2,
+section.offer > .title h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.benefits > .title h2 span,
+section.for > .title h2 span,
+section.offer > .title h2 span {
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-lg);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    text-transform: uppercase;
+}
+section.benefits > .title h2 span:nth-child(2) {
+    padding-left: 15%;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-columns: 1fr;
+    gap: 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style mindset mindset mindset mindset mindset mindset mindset"
+    "unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style mindset mindset mindset mindset mindset mindset mindset"
+    "unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style unique-style mindset mindset mindset mindset mindset mindset mindset"
+    "confidence confidence confidence confidence confidence burnout burnout burnout burnout burnout mindset mindset mindset mindset mindset mindset mindset"
+    "confidence confidence confidence confidence confidence burnout burnout burnout burnout burnout mindset mindset mindset mindset mindset mindset mindset"
+    "confidence confidence confidence confidence confidence burnout burnout burnout burnout burnout mindset mindset mindset mindset mindset mindset mindset"
+    "confidence confidence confidence confidence confidence burnout burnout burnout burnout burnout mindset mindset mindset mindset mindset mindset mindset"
+    "monetize monetize monetize monetize monetize monetize monetize monetize monetize bonus bonus bonus bonus bonus bonus bonus bonus"
+    "monetize monetize monetize monetize monetize monetize monetize monetize monetize bonus bonus bonus bonus bonus bonus bonus bonus"
+    "monetize monetize monetize monetize monetize monetize monetize monetize monetize bonus bonus bonus bonus bonus bonus bonus bonus";
+    padding: 0 10vw;
+}
+.unique-style {
+    grid-area: unique-style;
+    display: flex;
+    gap: 25px;
+    padding: 3vw 3.5vw;
+}
+.confidence {
+    grid-area: confidence;
+}
+.burnout {
+    grid-area: burnout;
+}
+.confidence, .burnout {
+    padding: 2vw;
+}
+.confidence .text,
+.burnout .text,
+.plus-bonus {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.mindset {
+    grid-area: mindset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 3vw;
+}
+.monetize {
+    grid-area: monetize;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 3vw 1.5vw;
+}
+.plus-bonus {
+    grid-area: bonus;
+    padding: 2vw 4vw 2vw 2vw;
+}
+.benefits-grid > div {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid rgba(237, 237, 237, 0.15);
+}
+.benefits-grid > div[class] {
+    background: rgb(19 35 32 / 37%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.benefits-grid .text .description,
+.benefits-grid > div .clue .text {
+    color: var(--color-ligghtgrey);
+}
+.benefits-grid > div .text > .title {
+    font-family: "Cabinet Grotesk Bold", sans-serif;
+    font-size: var(--fs-md);
+}
+.unique-style img {
+    width: 8vw;
+}
+.monetize img {
+    width: 10vw;
+}
+.unique-style .text,
+.mindset .text,
+.monetize .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.unique-style .text {
+    justify-content: center;
+    flex: 2;
+}
+.mindset img {
+    width: 12vw;
+    height: 12vw;
+}
+.mindset .clue {
+    display: flex;
+    gap: 25px;
+}
+.mindset .clue > .line {
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to bottom, #D55621 0%, #57D1C8 100%);
+}
+.plus-bonus > .plus {
+    padding: 5px 7.5px;
+    background: white;
+    color: black;
+    width: fit-content;
+    font-family: 'Cabinet Grotesk Medium', sans-serif;
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+}
+.plus-bonus > .text {
+    font-size: calc(var(--fs-md) - 6px);
+    font-family: 'Cabinet Grotesk Medium', sans-serif;
+}
+section.benefits > .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+section.benefits > .btn-wrapper > .offer-btn-clue {
+    font-size: var(--fs-sm);
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    padding:10px 17.5px 10px 15px;
+    border: 2.5px solid rgba(255, 255, 255, 0.20);
+    border-right: none;
+    display: flex;
+    align-items: center;
+}
+section.benefits > .btn-wrapper > .offer-btn,
+section.offer > .btn-wrapper > .offer-btn {
+    background-image: url("../assets/images/waitlist/offer-btn-bg.webp");
+    background-size: 105% 115%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 10px 25px 10px 15px;
+    font-size: var(--fs-md);
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2.5px solid rgba(255, 255, 255, 0.20);
+    height: 100%;
+    align-self: stretch;
+}
+section.benefits > .btn-wrapper > .offer-btn .arrow,
+section.offer > .btn-wrapper > .offer-btn .arrow{
+    width: calc(var(--fs-md) * 1.5);
+    height: calc(var(--fs-md) * 1.5);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.benefits > .btn-wrapper > .offer-btn .arrow img,
+section.offer > .btn-wrapper > .offer-btn .arrow img {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+section.for {
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/waitlist/section-for-bg.webp");
+    background-size:
+            100% 100%,
+            110% 120%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 75px 0;
+}
+section.for .content .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10vw;
+}
+section.for .content .item-container > div.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    outline: 2px solid rgba(237, 237, 237, 0.15);
+    border-radius: 10px;
+}
+section.for  div.item > img {
+    flex: 3;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+section.for  div.item > div:last-child {
+    flex: 2;
+    background: #0B191C;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+    font-size: var(--fs-sm);
+    font-family: "Cabinet Grotesk Regular", sans-serif;
+}
+section.for > .title > h2,
+section.offer > .title > h2 {
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    fill: transparent;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin: auto;
+}
+section.for .title > .clue {
+    padding-top: 25px;
+    font-size: var(--fs-sm);
+    text-align: center;
+    font-family: "Cabinet Grotesk Medium", sans-serif;
+}
+.mobile {
+    display: none;
+}
+section.offer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--color-black);
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/waitlist/section-offer-bg.webp");
+    background-size:
+            100% 100%,
+            100% 100%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    padding: 70px 10vw;
+
+}
+section.offer > .title > h2 {
+    margin: 0;
+    align-items: baseline;
+}
+section.offer > .offer-clue {
+    padding: 15px 20px;
+    color: var(--color-black);
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 115%;
+    font-size: var(--fs-sm);
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);
+    width: fit-content;
+}
+section.offer > .btn-wrapper {
+    padding-top: 40px;
+}
+section.offer > .btn-wrapper > .offer-btn {
+    width: fit-content;
+    padding: 20px;
+}
+
+
+@media only screen and (min-width: 2560px) and (max-width: 3840px) {
+    :root {
+        --fs-xxlg: 74px;
+        --fs-xlg: 64px;
+        --fs-lg: 52px;
+        --fs-md: 40px;
+        --fs-sm: 28px;
+        --fs-xsm: 26px;
+
+    }
+    .mindset img {
+        width: 6vw;
+        height: 6vw;
+    }
+    .monetize img {
+        width: 5vw;
+        height: 5vw;
+    }
+    .unique-style img {
+        width: 5vw;
+    }
+    section.offer {
+        background-size: 100% 100%, 100% 150%;
+        background-repeat: no-repeat;
+        background-position: center, 50% 100%
+    }
+}
+@media (min-width: 1920px) and (max-width: 2559px) {
+    :root {
+        --fs-xxlg: 68px;
+        --fs-xlg: 58px;
+        --fs-lg: 48px;
+        --fs-md: 32px;
+        --fs-sm: 26px;
+        --fs-xsm: 24px;
+    }
+    .mindset img {
+        width: 7.5vw;
+        height: 7.5vw;
+    }
+    .monetize img {
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+    .unique-style img {
+        width: 6vw;
+    }
+    section.offer {
+        background-size: 100% 100%, 100% 140%;
+        background-repeat: no-repeat;
+        background-position: center, 50% 100%
+    }
+}
+@media (min-width: 1600px) and (max-width: 1919px) {
+    :root {
+        --fs-xxlg: 64px;
+        --fs-xlg: 54px;
+        --fs-lg: 44px;
+        --fs-md: 30px;
+        --fs-sm: 24px;
+        --fs-xsm: 22px;
+    }
+    .mindset img {
+        width: 8vw;
+        height: 8vw;
+    }
+    .monetize img {
+        width: 7vw;
+        height: 7vw;
+    }
+    .unique-style img {
+        width: 6.5vw;
+    }
+    section.offer > .title h2 span {
+        font-size: calc(var(--fs-lg) - 6px);
+    }
+}
+@media (min-width: 1366px) and (max-width: 1599px) {
+    :root {
+        --fs-xxlg: 64px;
+        --fs-xlg: 54px;
+        --fs-lg: 40px;
+        --fs-md: 28px;
+        --fs-sm: 24px;
+        --fs-xsm: 22px;
+    }
+    .benefits-grid,
+    section.for .content .item-container {
+        padding: 0 7.5vw;
+    }
+    section.for div.item > div:last-child {
+        font-size: 20px;
+    }
+    section.offer > .title h2 span {
+        font-size: calc(var(--fs-lg) - 6px);
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .benefits-grid,
+    section.for .content .item-container {
+        padding: 0 5vw;
+    }
+    section.for div.item > div:last-child {
+        padding: 15px 15px 30px 15px;
+    }
+    section.offer {
+        gap: 10px;
+    }
+    section.offer > .btn-wrapper {
+        padding-top: 30px;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --fs-xxlg: 54px;
+        --fs-xlg: 46px;
+        --fs-lg: 36px;
+        --fs-md: 24px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+    .benefits-grid,
+    section.for .content .item-container {
+        padding: 0 5vw;
+    }
+    section.for .content .item-container > div.item {
+        flex-wrap: wrap;
+        min-width: 340px;
+    }
+    section.for div.item > div:last-child {
+        font-size: 20px;
+        padding: 15px 15px 30px 15px;
+    }
+    section.benefits > .btn-wrapper {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 5vw;
+    }
+    section.benefits > .btn-wrapper > .offer-btn-clue {
+        border-right: 2.5px solid rgba(255, 255, 255, 0.20);
+    }
+}
+@media screen and (max-width: 1023px) {
+    section.offer {
+        padding: 70px 5vw;
+        background-size:
+                100% 100%,
+                180% 120%;
+        background-repeat: no-repeat;
+        background-position: center, 75% 50%;
+    }
+    section.offer > .title h2 span {
+        font-size: calc(var(--fs-lg) - 6px);
+    }
+    section.offer > .offer-clue {
+        font-size: var(--fs-xsm);
+    }
+    section.offer > .btn-wrapper {
+        padding-top: 20px;
+    }
+    section.offer > .btn-wrapper > .offer-btn {
+        font-size: calc(var(--fs-md) + 4px);
+    }
+    section.benefits > .btn-wrapper > .offer-btn .arrow img, section.offer > .btn-wrapper > .offer-btn .arrow img {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+@media screen and (max-width: 767px) {
+    :root {
+        --fs-xxlg: 54px;
+        --fs-xlg: 46px;
+        --fs-lg: 36px;
+        --fs-md: 24px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+    section.benefits {
+        background-image:
+                url("../assets/images/index/bg-noise.png"),
+                url("../assets/images/index/bg-noise.png"),
+                url("../assets/images/waitlist/section-benefits-bg.webp");
+        background-size: 200% 50%, 200% 50%, 250% 100%;
+        background-repeat: no-repeat;
+        background-position: top, bottom, 50% 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 75px 0;
+        position: relative;
+    }
+    .benefits-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-auto-columns: 1fr;
+        gap: 0;
+        grid-template-areas:
+            "unique-style"
+            "confidence"
+            "burnout"
+            "mindset"
+            "monetize"
+            "plus-bonus";
+        padding: 0 10vw;
+    }
+    .unique-style { grid-area: unique-style; }
+    .confidence { grid-area: confidence; }
+    .burnout { grid-area: burnout; }
+    .mindset { grid-area: mindset; }
+    .monetize { grid-area: monetize; }
+    .plus-bonus { grid-area: plus-bonus; }
+    section.benefits > .btn-wrapper {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 5vw;
+    }
+    section.benefits > .btn-wrapper > .offer-btn-clue {
+        border-right: 2.5px solid rgba(255, 255, 255, 0.20);
+    }
+    section.benefits > .btn-wrapper > .offer-btn,
+    section.offer > .btn-wrapper > .offer-btn {
+        padding: 10px;
+        font-size: var(--fs-sm);
+    }
+    section.benefits > .btn-wrapper > .offer-btn .arrow img,
+    section.offer > .btn-wrapper > .offer-btn .arrow img {
+        width: 32px;
+        height: 32px;
+    }
+    section.for {
+        gap: 50px;
+    }
+    section.for .content .item-container {
+        flex-direction: column;
+    }
+    section.for .content .item-container > div.item {
+        flex: none;
+    }
+    section.for div.item > div:last-child {
+        padding: 15px 15px 25px 15px;
+    }
+    section.for div.item > div:last-child br {
+        display: none;
+    }
+    section.benefits > .btn-wrapper > .offer-btn-clue {
+        justify-content: center;
+    }
+    .mindset .clue {
+        gap: 15px;
+    }
+    section.offer {
+        background-size: 150% 150%, 220% 150%;
+        background-repeat: no-repeat;
+        background-position: center, 65% 77%;
+        padding: 50px 3vw;
+    }
+    section.offer > .title h2 span {
+        font-size: calc(var(--fs-md) - 3px);
+    }
+    section.offer > .offer-clue {
+        font-size: 16px;
+        padding: 10px;
+    }
+    section.offer > .btn-wrapper > .offer-btn {
+        font-size: var(--fs-md);
+    }
+    section.offer > .btn-wrapper {
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 479px) {
+    :root {
+        --fs-xxlg: 44px;
+        --fs-xlg: 40px;
+        --fs-lg: 34px;
+        --fs-md: 24px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+    .benefits-grid,
+    section.for .content .item-container {
+        padding: 0 5vw;
+    }
+    section.benefits > .title h2 span {
+
+    }
+    section.benefits > .title h2 span:nth-child(2) {
+        padding-left: 0;
+    }
+    section.benefits > .btn-wrapper > .offer-btn,
+    section.offer > .btn-wrapper > .offer-btn {
+        text-align: center;
+        gap: 25px;
+        font-size: var(--fs-sm);
+        padding-right: 10vw;
+    }
+    section.benefits > .btn-wrapper > .offer-btn .arrow,
+    section.offer > .btn-wrapper > .offer-btn .arrow{
+        width: 38px;
+        height: 38px;
+    }
+    section.benefits > .btn-wrapper > .offer-btn .arrow img,
+    section.offer > .btn-wrapper > .offer-btn .arrow{
+        width: 32px;
+        height: 32px;
+    }
+    section.benefits > .btn-wrapper > .offer-btn br.mobile {
+        display: block;
+    }
+    .confidence, .burnout {
+        padding: 4vw;
+    }
+    section.offer > .title:not(.mobile) {
+        display: none;
+    }
+    section.offer > .title.mobile {
+        display: block;
+    }
+}
+@media screen and (max-width: 365px) {
+    section.offer > .title h2 span {
+        font-size: calc(var(--fs-md) - 6px);
+    }
+}
+
+
