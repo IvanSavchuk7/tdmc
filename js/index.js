@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.childNodes[submitBtn.childNodes.length - 1].textContent = "";
         loader.style.display = "block";
 
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
         const formData = new FormData(form);
 
         fetch("https://script.google.com/macros/s/AKfycbzQnAbGx9k7TYnq7CFn-r_KPyNn-8Ig2QO5fIxkaPRz9ZQX815ZEcdd2cF23chXYg/exec", {

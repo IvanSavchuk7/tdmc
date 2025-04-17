@@ -25,7 +25,9 @@ section.benefits {
 }
 section.benefits > .title h2,
 section.for > .title h2,
-section.offer > .title h2 {
+section.offer > .title h2,
+section.expert > .title h2,
+section.steps > .title h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +37,9 @@ section.offer > .title h2 {
 }
 section.benefits > .title h2 span,
 section.for > .title h2 span,
-section.offer > .title h2 span {
+section.offer > .title h2 span,
+section.expert > .title h2 span,
+section.steps > .title h2 span {
     font-family: 'Benzin', sans-serif;
     font-size: var(--fs-lg);
     font-style: normal;
@@ -190,7 +194,9 @@ section.benefits > .btn-wrapper > .offer-btn-clue {
     align-items: center;
 }
 section.benefits > .btn-wrapper > .offer-btn,
-section.offer > .btn-wrapper > .offer-btn {
+section.offer > .btn-wrapper > .offer-btn,
+section.expert > .btn-wrapper > .offer-btn,
+section.steps > .btn-wrapper > .offer-btn {
     background-image: url("../assets/images/waitlist/offer-btn-bg.webp");
     background-size: 105% 115%;
     background-repeat: no-repeat;
@@ -209,7 +215,9 @@ section.offer > .btn-wrapper > .offer-btn {
     align-self: stretch;
 }
 section.benefits > .btn-wrapper > .offer-btn .arrow,
-section.offer > .btn-wrapper > .offer-btn .arrow{
+section.offer > .btn-wrapper > .offer-btn .arrow,
+section.expert > .btn-wrapper > .offer-btn .arrow,
+section.steps > .btn-wrapper > .offer-btn .arrow {
     width: calc(var(--fs-md) * 1.5);
     height: calc(var(--fs-md) * 1.5);
     background: white;
@@ -218,7 +226,9 @@ section.offer > .btn-wrapper > .offer-btn .arrow{
     justify-content: center;
 }
 section.benefits > .btn-wrapper > .offer-btn .arrow img,
-section.offer > .btn-wrapper > .offer-btn .arrow img {
+section.offer > .btn-wrapper > .offer-btn .arrow img,
+section.expert > .btn-wrapper > .offer-btn .arrow img,
+section.steps > .btn-wrapper > .offer-btn .arrow img{
     width: 2.5vw;
     height: 2.5vw;
 }
@@ -265,7 +275,9 @@ section.for  div.item > div:last-child {
     font-family: "Cabinet Grotesk Regular", sans-serif;
 }
 section.for > .title > h2,
-section.offer > .title > h2 {
+section.offer > .title > h2,
+section.expert > .title > h2,
+section.steps > .title h2 {
     background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -317,11 +329,194 @@ section.offer > .offer-clue {
 section.offer > .btn-wrapper {
     padding-top: 40px;
 }
-section.offer > .btn-wrapper > .offer-btn {
+section.offer > .btn-wrapper > .offer-btn,
+section.expert > .btn-wrapper > .offer-btn,
+section.steps > .btn-wrapper > .offer-btn {
     width: fit-content;
     padding: 20px;
 }
+section.expert {
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/waitlist/section-expert-bg.webp");
+    background-size:
+            100% 100%,
+            110% 120%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 125px 0;
+}
+section.expert > .content {
+    padding: 0 25vw;
+    display: flex;
+    justify-content: center;
+}
+section.expert > .content .img-container {
+    border-radius: 16px;
+    margin-right: -12px;
+    position: relative;
+    z-index: 10;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+section.expert > .content .img-container img {
+    border: 3px solid rgba(255, 255, 255, 0.20);
+    display: block;
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+section.expert > .content > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+section.expert > .content .main-text-wrapper,
+section.expert > .content .bottom-text-wrapper {
+    border: 3px solid rgba(255, 255, 255, 0.20);
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    background: linear-gradient(180deg, rgba(174, 174, 174, 0.02) -30.64%, rgba(174, 174, 174, 0.00) 97.99%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 25px calc(25px + 3vw) 25px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+section.expert > .content .main-text-wrapper {
+    flex: 4;
+}
+section.expert .main-text-wrapper .text-take,
+section.expert .bottom-text-wrapper .text {
+    font-size: var(--fs-md);
+    font-weight: bold;
+}
+section.expert .list {
+    padding-right: 3vw;
+}
+section.expert .list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+section.expert .list ul > li {
+    display: flex;
+    gap: var(--fs-xsm);
+    align-items: center;
+}
+section.expert .list ul > li img {
+    width: 32px;
+    height: 32px;
+}
+section.expert .bottom-text-wrapper .free {
+    padding: 5px 7.5px;
+    background: white;
+    color: black;
+    width: fit-content;
+    font-family: 'Cabinet Grotesk Medium', sans-serif;
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+}
+section.expert .list ul > li span,
+section.expert .list ul > li span b {
+    font-size: var(--fs-sm);
+}
+section.expert > .btn-wrapper > .offer-btn,
+section.steps > .btn-wrapper > .offer-btn {
+    margin: auto;
+    padding: 30px 50px;
+    justify-content: center;
+    gap: 20px;
+}
+section.steps {
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/waitlist/section-steps-bg.webp");
+    background-size:
+            100% 100%,
+            110% 150%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 125px 0;
+}
+section.steps .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "step-1 step-1 step-2 step-2"
+    "step-3 step-3 step-4 step-4"
+    ". step-5 step-5 .";
+    padding: 0 15vw;
+}
+section.steps .container > div {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    outline: 2px solid rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    padding: 45px 75px 45px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+section.steps .step-1 { grid-area: step-1; }
 
+section.steps .step-2 { grid-area: step-2; }
+
+section.steps .step-3 { grid-area: step-3; }
+
+section.steps .step-4 { grid-area: step-4; }
+
+section.steps .step-5 { grid-area: step-5; }
+
+section.steps .container .step-title {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+section.steps .container .step-title .num {
+    font-size: calc(var(--fs-md) * 2);
+    opacity: 0.3;
+    font-weight: bold;
+    font-family: 'Benzin', sans-serif;
+}
+section.steps .container .step-title h4 {
+    font-size: var(--fs-md);
+    font-family: "Cabinet Grotesk Medium", sans-serif;
+}
+section.steps > .title h2 {
+    gap: 15px;
+}
+section.steps > .title h2 span {
+    font-size: 88px;
+}
+section.steps > .title h2 span:last-child {
+    font-size: var(--fs-sm);
+}
+section.steps > .btn-wrapper > .offer-btn {
+    font-size: var(--fs-lg);
+}
+section.steps > .btn-wrapper > .offer-btn .arrow {
+    width: calc(var(--fs-lg) * 1.5);
+    height: calc(var(--fs-lg) * 1.5);
+}
+section.steps > .btn-wrapper > .offer-btn .arrow img {
+    width: 3vw;
+    height: 3vw;
+}
 
 @media only screen and (min-width: 2560px) and (max-width: 3840px) {
     :root {
@@ -349,6 +544,9 @@ section.offer > .btn-wrapper > .offer-btn {
         background-repeat: no-repeat;
         background-position: center, 50% 100%
     }
+    section.expert > .content .main-text-wrapper, section.expert > .content .bottom-text-wrapper {
+        justify-content: center;
+    }
 }
 @media (min-width: 1920px) and (max-width: 2559px) {
     :root {
@@ -375,6 +573,10 @@ section.offer > .btn-wrapper > .offer-btn {
         background-repeat: no-repeat;
         background-position: center, 50% 100%
     }
+    section.expert > .content .main-text-wrapper, section.expert > .content .bottom-text-wrapper {
+        justify-content: center;
+    }
+
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
     :root {
@@ -399,6 +601,15 @@ section.offer > .btn-wrapper > .offer-btn {
     section.offer > .title h2 span {
         font-size: calc(var(--fs-lg) - 6px);
     }
+    section.expert > .content {
+        padding: 0 20vw;
+    }
+    section.expert > .content .main-text-wrapper, section.expert > .content .bottom-text-wrapper {
+        justify-content: center;
+    }
+    section.steps .container {
+        padding: 0 10vw;
+    }
 }
 @media (min-width: 1366px) and (max-width: 1599px) {
     :root {
@@ -419,6 +630,29 @@ section.offer > .btn-wrapper > .offer-btn {
     section.offer > .title h2 span {
         font-size: calc(var(--fs-lg) - 6px);
     }
+    section.expert {
+        gap: 75px;
+    }
+    section.expert > .content {
+        padding: 0 18vw;
+    }
+    section.expert > .content .main-text-wrapper, section.expert > .content .bottom-text-wrapper {
+        justify-content: center;
+        padding: 25px 25px 25px 37px;
+    }
+    section.expert .list {
+        padding-right: 0;
+    }
+    section.expert > .btn-wrapper > .offer-btn,
+    section.steps > .btn-wrapper > .offer-btn {
+        padding: 20px 40px;
+    }
+    section.steps .container {
+        padding: 0 7.5vw;
+    }
+    section.steps .container > div {
+        gap: 40px;
+    }
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
     .benefits-grid,
@@ -434,7 +668,35 @@ section.offer > .btn-wrapper > .offer-btn {
     section.offer > .btn-wrapper {
         padding-top: 30px;
     }
-
+    section.expert {
+        gap: 75px;
+        padding: 75px 0;
+        background-size: 100% 100%, 140% 100%;
+    }
+    section.expert > .content {
+        padding: 0 10vw;
+    }
+    section.expert > .content .img-container {
+        flex: 1;
+    }
+    section.expert > .content .text {
+        flex: 2;
+    }
+    section.expert .list ul > li img {
+        width: 24px;
+        height: 24px;
+    }
+    section.expert > .btn-wrapper > .offer-btn,
+    section.steps > .btn-wrapper > .offer-btn {
+        padding: 20px 40px;
+    }
+    section.steps .container {
+        background-size: 100% 100%, 150% 150%;
+        padding: 0 5vw;
+    }
+    section.steps .container > div {
+        gap: 40px;
+    }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     :root {
@@ -447,7 +709,7 @@ section.offer > .btn-wrapper > .offer-btn {
     }
     .benefits-grid,
     section.for .content .item-container {
-        padding: 0 5vw;
+        padding: 0 3.5vw;
     }
     section.for .content .item-container > div.item {
         flex-wrap: wrap;
@@ -464,6 +726,40 @@ section.offer > .btn-wrapper > .offer-btn {
     }
     section.benefits > .btn-wrapper > .offer-btn-clue {
         border-right: 2.5px solid rgba(255, 255, 255, 0.20);
+    }
+    section.expert {
+        gap: 75px;
+        padding: 75px 0;
+        background-size: 100% 100%, 140% 100%;
+    }
+    section.expert > .content {
+        padding: 0 5vw;
+    }
+    section.expert > .content .main-text-wrapper, section.expert > .content .bottom-text-wrapper {
+        padding: 15px 15px 15px 25px;
+        justify-content: center;
+    }
+    section.expert > .content .img-container {
+        flex: 2;
+    }
+    section.expert > .content .text {
+        flex: 3;
+    }
+    section.expert .list ul > li img {
+        width: 24px;
+        height: 24px;
+    }
+    section.expert > .btn-wrapper > .offer-btn,
+    section.steps > .btn-wrapper > .offer-btn {
+        padding: 20px 40px;
+    }
+    section.steps .container {
+        background-size: 100% 100%, 150% 150%;
+        padding: 0 2.5vw;
+    }
+    section.steps .container > div {
+        padding: 35px 25px;
+        gap: 40px;
     }
 }
 @media screen and (max-width: 1023px) {
@@ -484,10 +780,15 @@ section.offer > .btn-wrapper > .offer-btn {
     section.offer > .btn-wrapper {
         padding-top: 20px;
     }
-    section.offer > .btn-wrapper > .offer-btn {
+    section.offer > .btn-wrapper > .offer-btn,
+    section.expert > .btn-wrapper > .offer-btn,
+    section.steps > .btn-wrapper > .offer-btn {
         font-size: calc(var(--fs-md) + 4px);
     }
-    section.benefits > .btn-wrapper > .offer-btn .arrow img, section.offer > .btn-wrapper > .offer-btn .arrow img {
+    section.benefits > .btn-wrapper > .offer-btn .arrow img,
+    section.offer > .btn-wrapper > .offer-btn .arrow img,
+    section.expert > .btn-wrapper > .offer-btn .arrow img,
+    section.steps > .btn-wrapper > .offer-btn .arrow img {
         width: 4vw;
         height: 4vw;
     }
@@ -546,12 +847,16 @@ section.offer > .btn-wrapper > .offer-btn {
         border-right: 2.5px solid rgba(255, 255, 255, 0.20);
     }
     section.benefits > .btn-wrapper > .offer-btn,
-    section.offer > .btn-wrapper > .offer-btn {
+    section.offer > .btn-wrapper > .offer-btn,
+    section.expert > .btn-wrapper > .offer-btn,
+    section.steps > .btn-wrapper > .offer-btn {
         padding: 10px;
         font-size: var(--fs-sm);
     }
     section.benefits > .btn-wrapper > .offer-btn .arrow img,
-    section.offer > .btn-wrapper > .offer-btn .arrow img {
+    section.offer > .btn-wrapper > .offer-btn .arrow img,
+    section.expert > .btn-wrapper > .offer-btn .arrow img,
+    section.steps > .btn-wrapper > .offer-btn .arrow img{
         width: 32px;
         height: 32px;
     }
@@ -589,11 +894,36 @@ section.offer > .btn-wrapper > .offer-btn {
         font-size: 16px;
         padding: 10px;
     }
-    section.offer > .btn-wrapper > .offer-btn {
+    section.offer > .btn-wrapper > .offer-btn,
+    section.expert > .btn-wrapper > .offer-bt,
+    section.steps > .btn-wrapper > .offer-btn {
         font-size: var(--fs-md);
     }
     section.offer > .btn-wrapper {
         padding-top: 0;
+    }
+    section.steps {
+        background-size: 100% 100%, 220% 100%;
+        background-position: center, 70% 50%;
+    }
+    section.steps .content > .container {
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "step-1"
+            "step-2"
+            "step-3"
+            "step-4"
+            "step-5";
+        padding: 0 7.5vw;
+    }
+    section.steps > .title h2 span {
+        font-size: 54px;
+    }
+    section.steps > .btn-wrapper > .offer-btn .arrow {
+        width: calc(var(--fs-lg));
+        height: calc(var(--fs-lg));
     }
 }
 @media screen and (max-width: 479px) {
@@ -616,19 +946,25 @@ section.offer > .btn-wrapper > .offer-btn {
         padding-left: 0;
     }
     section.benefits > .btn-wrapper > .offer-btn,
-    section.offer > .btn-wrapper > .offer-btn {
+    section.offer > .btn-wrapper > .offer-btn,
+    section.expert > .btn-wrapper > .offer-btn,
+    section.steps > .btn-wrapper > .offer-btn {
         text-align: center;
         gap: 25px;
         font-size: var(--fs-sm);
         padding-right: 10vw;
     }
     section.benefits > .btn-wrapper > .offer-btn .arrow,
-    section.offer > .btn-wrapper > .offer-btn .arrow{
+    section.offer > .btn-wrapper > .offer-btn .arrow,
+    section.expert > .btn-wrapper > .offer-btn .arrow,
+    section.steps > .btn-wrapper > .offer-btn .arrow{
         width: 38px;
         height: 38px;
     }
     section.benefits > .btn-wrapper > .offer-btn .arrow img,
-    section.offer > .btn-wrapper > .offer-btn .arrow{
+    section.offer > .btn-wrapper > .offer-btn .arrow,
+    section.expert > .btn-wrapper > .offer-btn .arrow,
+    section.steps > .btn-wrapper > .offer-btn .arrow {
         width: 32px;
         height: 32px;
     }
@@ -643,6 +979,14 @@ section.offer > .btn-wrapper > .offer-btn {
     }
     section.offer > .title.mobile {
         display: block;
+    }
+    section.steps {
+        background-size: 100% 100%, 220% 100%;
+        background-position: center, 70% 50%;
+    }
+    section.steps .container > div {
+        padding: 30px 20px;
+        gap: 30px;
     }
 }
 @media screen and (max-width: 365px) {
