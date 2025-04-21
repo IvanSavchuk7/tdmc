@@ -1,0 +1,322 @@
+main {
+    min-height: 100vh;
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/tariffs/tariff-form-bg.webp");
+    background-size:
+            100% 100%,
+            100% 100%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    padding: 50px 20vw;
+}
+main > .content {
+    margin: auto;
+    max-width: 840px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 50px;
+}
+
+.content > .title h1 {
+    text-align: center;
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-lg);
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content > .title .clue {
+    font-family: "Cabinet Grotesk Regular", sans-serif;
+    opacity: .7;
+    font-size: var(--fs-sm);
+    padding: 15px 50px 0 50px;
+    text-align: center;
+}
+.tariff {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    border: 2px solid rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 10px 10px;
+}
+.tariff > .radio-group {
+    width: fit-content;
+    height: fit-content;
+}
+.tariff > .tariff-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tariff > .tariff-info > div {
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+}
+.tariff > .tariff-info > div:last-child {
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tariff .container {
+    border: 3px solid #FFFFFF;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.income-section .title {
+    font-size: var(--fs-md);
+}
+.income-section .subtitle {
+    opacity: .7;
+}
+.radio-wrapper {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.radio-wrapper .radio-text {
+    opacity: .7;
+    font-size: var(--fs-sm);
+}
+.radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.container {
+    position: relative;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    user-select: none;
+    border: 3px solid #FFFFFF66;
+    display: block;
+}
+
+.checkmark {
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FCFFD4;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 100ms ease;
+}
+
+.container input:checked ~ .checkmark:after {
+    transform: scale(1);
+}
+
+
+.form-wrapper {
+    height: fit-content;
+}
+.waitlist-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #fff;
+}
+.waitlist-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-sm);
+    font-family: "Cabinet Grotesk Regular", sans-serif;
+    gap: 10px;
+    color: var(--color-ligghtgrey);
+}
+.waitlist-form input,
+.waitlist-form input:active {
+    width: 100%;
+    padding: 15px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 0;
+    font-size: var(--fs-sm);
+    outline: none;
+    font-weight: 500;
+}
+.waitlist-form input:active {
+    color: #FFFFFF;
+}
+
+
+.waitlist-form input::placeholder:active {
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.07);;
+}
+.waitlist-form label:nth-child(2) {
+    position: relative;
+}
+.iti__country-list {
+    position: absolute;
+    max-width: 300px !important;
+    width: 15vw !important;
+    max-height: 300px !important;
+    left: 8%;
+    top: 0;
+    background: black !important;
+}
+.submit-btn {
+    margin-top: 15px;
+    background: #FFFFFF;
+    color: black;
+    padding: 10px;
+    font-size: var(--fs-md);
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.submit-btn .arrow {
+    width: 36px;
+    height: 36px;
+    background: url("../assets/images/index/offer-btn-bg.webp");
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn .arrow img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 3840px) {
+    :root {
+        --fs-lg: 80px;
+        --fs-md: 40px;
+        --fs-sm: 34px;
+        --fs-xsm: 28px;
+    }
+    main > .content {
+        max-width: 1200px;
+    }
+    .waitlist-form input, .waitlist-form input:active {
+        padding: 20px 15px;
+    }
+    .submit-btn .arrow {
+        width: calc(var(--fs-md) + 6px);
+        height: calc(var(--fs-md) + 6px);
+    }
+    .submit-btn .arrow img {
+        width: calc(var(--fs-md));
+        height: calc(var(--fs-md));
+    }
+}
+@media screen and (max-width: 2559px) {
+    .waitlist-form input, .waitlist-form input:active {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 1919px) {
+    :root {
+        --fs-lg: 64px;
+        --fs-md: 32px;
+        --fs-sm: 28px;
+        --fs-xsm: 24px;
+    }
+}
+@media screen and (max-width: 1599px) {
+    :root {
+        --fs-lg: 72px;
+        --fs-md: 30px;
+        --fs-sm: 26px;
+        --fs-xsm: 24px;
+    }
+    main {
+        padding: 70px 15vw;
+    }
+}
+@media screen and (max-width: 1365px) {
+    :root {
+        --fs-lg: 50px;
+        --fs-md: 28px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    main {
+        padding: 50px 5vw;
+        background-size: 100% 100%, 180% 100%;
+    }
+    main > .content {
+        padding: 40px 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    :root {
+        --fs-lg: 36px;
+        --fs-md: 26px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+    main {
+        padding: 60px 3vw;
+    }
+    main > .content {
+        padding: 30px 15px;
+    }
+    .content > .title .clue {
+        padding: 15px 0;
+    }
+    .waitlist-form input, .waitlist-form input:active {
+        padding: 10px;
+    }
+    .tariff > .tariff-info > div.mobile {
+        display: block;
+    }
+    .tariff > .tariff-info > div:first-child:not(.mobile) {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    :root {
+        --fs-lg: 30px;
+        --fs-md: 20px;
+        --fs-sm: 16px;
+        --fs-xsm: 16px;
+    }
+    main {
+        background-size: 100% 100%, 250% 100%;
+    }
+    main > .content {
+        gap: 20px;
+    }
+}

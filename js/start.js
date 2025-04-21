@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             playOverlay.style.display = "none";
         }, 200);
 
-        if (window.innerWidth > 767) {
+        if (window.innerWidth > 640) {
             document.getElementById("video-target").scrollIntoView({
                 behavior: "smooth",
                 block: "center"
