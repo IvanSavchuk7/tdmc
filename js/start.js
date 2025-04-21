@@ -73,10 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     arrowDiv.style.display = "block";
                     loader.style.display = "none";
-                    arrowDiv.src = "assets/images/checkmark.svg"; // ✅ Your checkmark icon
+                    arrowDiv.src = "../assets/images/checkmark.svg"; // ✅ Your checkmark icon
                     arrowOuter.style.background = "none";
                     setTimeout(() => {
-                        window.location.href = "/complete/index.html";
+                        window.location.href = "https://ivansavchuk7.github.io/tdmc/start/complete/";
                     }, 500);
                     submitBtn.classList.add("submitted");
                 }

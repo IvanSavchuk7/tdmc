@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     arrowDiv.style.display = "block";
                     loader.style.display = "none";
-                    arrowDiv.src = "assets/images/checkmark.svg";
+                    arrowDiv.src = "../assets/images/checkmark.svg";
                     arrowOuter.style.background = "none";
 
                     submitBtn.classList.add("submitted");
 
                     setTimeout(() => {
-                        window.location.href = "https://tdmceducation.com/";
+                        window.location.href = "/";
                     }, 500);
                 }
             })
