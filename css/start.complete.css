@@ -217,9 +217,9 @@ main .content > .text,
 @media screen and (max-width: 480px) {
     :root {
         --fs-lg: 22px;
-        --fs-md: 26px;
-        --fs-sm: 20px;
-        --fs-xsm: 18px;
+        --fs-md: 20px;
+        --fs-sm: 16px;
+        --fs-xsm: 16px;
     }
     main {
         background-size: 300% 100%;
@@ -244,6 +244,9 @@ main .content > .text,
     }
     .content > .bonuses > .main-text br {
         display: none;
+    }
+    main .content .whatsapp-btn {
+        gap: 15px;
     }
 }
 @media screen and (max-width: 379px) {
