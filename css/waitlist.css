@@ -185,11 +185,11 @@ section.benefits > .btn-wrapper > .offer-btn-clue {
     display: flex;
     align-items: center;
 }
-section.benefits > .btn-wrapper > .offer-btn,
-section.offer > .btn-wrapper > .offer-btn,
-section.expert > .btn-wrapper > .offer-btn,
-section.steps > .btn-wrapper > .offer-btn,
-section.offer-red .btn-wrapper > .offer-btn {
+section.benefits > .btn-wrapper > .play-btn,
+section.offer > .btn-wrapper > .play-btn,
+section.expert > .btn-wrapper > .play-btn,
+section.steps > .btn-wrapper > .play-btn,
+section.offer-red .btn-wrapper > .play-btn {
     background-image: url("../assets/images/waitlist/offer-btn-bg.webp");
     background-size: 105% 115%;
     background-repeat: no-repeat;
@@ -207,11 +207,11 @@ section.offer-red .btn-wrapper > .offer-btn {
     height: 100%;
     align-self: stretch;
 }
-section.benefits > .btn-wrapper > .offer-btn .arrow,
-section.offer > .btn-wrapper > .offer-btn .arrow,
-section.expert > .btn-wrapper > .offer-btn .arrow,
-section.steps > .btn-wrapper > .offer-btn .arrow,
-section.offer-red .btn-wrapper > .offer-btn .arrow {
+section.benefits > .btn-wrapper > .play-btn .arrow,
+section.offer > .btn-wrapper > .play-btn .arrow,
+section.expert > .btn-wrapper > .play-btn .arrow,
+section.steps > .btn-wrapper > .play-btn .arrow,
+section.offer-red .btn-wrapper > .play-btn .arrow {
     width: calc(var(--fs-md) * 1.5);
     height: calc(var(--fs-md) * 1.5);
     background: white;
@@ -219,11 +219,11 @@ section.offer-red .btn-wrapper > .offer-btn .arrow {
     align-items: center;
     justify-content: center;
 }
-section.benefits > .btn-wrapper > .offer-btn .arrow img,
-section.offer > .btn-wrapper > .offer-btn .arrow img,
-section.expert > .btn-wrapper > .offer-btn .arrow img,
-section.steps > .btn-wrapper > .offer-btn .arrow img,
-section.offer-red .btn-wrapper > .offer-btn .arrow img {
+section.benefits > .btn-wrapper > .play-btn .arrow img,
+section.offer > .btn-wrapper > .play-btn .arrow img,
+section.expert > .btn-wrapper > .play-btn .arrow img,
+section.steps > .btn-wrapper > .play-btn .arrow img,
+section.offer-red .btn-wrapper > .play-btn .arrow img {
     width: 2.5vw;
     height: 2.5vw;
 }
@@ -322,10 +322,10 @@ section.register .title-clue{
 section.offer > .btn-wrapper {
     padding-top: 40px;
 }
-section.offer > .btn-wrapper > .offer-btn,
-section.expert > .btn-wrapper > .offer-btn,
-section.steps > .btn-wrapper > .offer-btn,
-section.offer-red .btn-wrapper > .offer-btn {
+section.offer > .btn-wrapper > .play-btn,
+section.expert > .btn-wrapper > .play-btn,
+section.steps > .btn-wrapper > .play-btn,
+section.offer-red .btn-wrapper > .play-btn {
     width: fit-content;
     padding: 20px;
 }
@@ -423,9 +423,9 @@ section.expert .list ul > li span,
 section.expert .list ul > li span b {
     font-size: var(--fs-sm);
 }
-section.expert > .btn-wrapper > .offer-btn,
-section.steps > .btn-wrapper > .offer-btn,
-section.offer-red .btn-wrapper > .offer-btn {
+section.expert > .btn-wrapper > .play-btn,
+section.steps > .btn-wrapper > .play-btn,
+section.offer-red .btn-wrapper > .play-btn {
     margin: auto;
     padding: 30px 50px;
     justify-content: center;
@@ -501,17 +501,17 @@ section.steps h2 span {
 section.steps h2 span:last-child {
     font-size: var(--fs-sm);
 }
-section.steps > .btn-wrapper > .offer-btn,
-section.offer-red .btn-wrapper > .offer-btn {
+section.steps > .btn-wrapper > .play-btn,
+section.offer-red .btn-wrapper > .play-btn {
     font-size: var(--fs-lg);
 }
-section.steps > .btn-wrapper > .offer-btn .arrow,
-section.offer-red .btn-wrapper > .offer-btn .arrow {
+section.steps > .btn-wrapper > .play-btn .arrow,
+section.offer-red .btn-wrapper > .play-btn .arrow {
     width: calc(var(--fs-lg) * 1.5);
     height: calc(var(--fs-lg) * 1.5);
 }
-section.steps > .btn-wrapper > .offer-btn .arrow img,
-section.offer-red .btn-wrapper > .offer-btn .arrow img {
+section.steps > .btn-wrapper > .play-btn .arrow img,
+section.offer-red .btn-wrapper > .play-btn .arrow img {
     width: 3vw;
     height: 3vw;
 }
@@ -907,9 +907,9 @@ section.form .submit-btn .arrow img {
     section.expert .list {
         padding-right: 0;
     }
-    section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.expert > .btn-wrapper > .play-btn,
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         padding: 20px 40px;
     }
     section.steps .container {
@@ -974,9 +974,9 @@ section.form .submit-btn .arrow img {
         width: 24px;
         height: 24px;
     }
-    section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.expert > .btn-wrapper > .play-btn,
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         padding: 20px 40px;
     }
     section.steps .container {
@@ -1067,9 +1067,9 @@ section.form .submit-btn .arrow img {
         width: 24px;
         height: 24px;
     }
-    section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.expert > .btn-wrapper > .play-btn,
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         padding: 20px 40px;
     }
     section.steps .container {
@@ -1128,17 +1128,17 @@ section.form .submit-btn .arrow img {
     section.offer > .btn-wrapper {
         padding-top: 20px;
     }
-    section.offer > .btn-wrapper > .offer-btn,
-    section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.offer > .btn-wrapper > .play-btn,
+    section.expert > .btn-wrapper > .play-btn,
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         font-size: calc(var(--fs-md) + 4px);
     }
-    section.benefits > .btn-wrapper > .offer-btn .arrow img,
-    section.offer > .btn-wrapper > .offer-btn .arrow img,
-    section.expert > .btn-wrapper > .offer-btn .arrow img,
-    section.steps > .btn-wrapper > .offer-btn .arrow img,
-    section.offer-red .btn-wrapper > .offer-btn .arrow img {
+    section.benefits > .btn-wrapper > .play-btn .arrow img,
+    section.offer > .btn-wrapper > .play-btn .arrow img,
+    section.expert > .btn-wrapper > .play-btn .arrow img,
+    section.steps > .btn-wrapper > .play-btn .arrow img,
+    section.offer-red .btn-wrapper > .play-btn .arrow img {
         width: 4vw;
         height: 4vw;
     }
@@ -1199,19 +1199,19 @@ section.form .submit-btn .arrow img {
     section.benefits > .btn-wrapper > .offer-btn-clue {
         border-right: 2.5px solid rgba(255, 255, 255, 0.20);
     }
-    section.benefits > .btn-wrapper > .offer-btn,
-    section.offer > .btn-wrapper > .offer-btn,
-    section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.benefits > .btn-wrapper > .play-btn,
+    section.offer > .btn-wrapper > .play-btn,
+    section.expert > .btn-wrapper > .play-btn,
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         padding: 10px;
         font-size: var(--fs-sm);
     }
-    section.benefits > .btn-wrapper > .offer-btn .arrow img,
-    section.offer > .btn-wrapper > .offer-btn .arrow img,
-    section.expert > .btn-wrapper > .offer-btn .arrow img,
-    section.steps > .btn-wrapper > .offer-btn .arrow img,
-    section.offer-red .btn-wrapper > .offer-btn .arrow img {
+    section.benefits > .btn-wrapper > .play-btn .arrow img,
+    section.offer > .btn-wrapper > .play-btn .arrow img,
+    section.expert > .btn-wrapper > .play-btn .arrow img,
+    section.steps > .btn-wrapper > .play-btn .arrow img,
+    section.offer-red .btn-wrapper > .play-btn .arrow img {
         width: 32px;
         height: 32px;
     }
@@ -1249,10 +1249,10 @@ section.form .submit-btn .arrow img {
         font-size: 16px;
         padding: 10px;
     }
-    section.offer > .btn-wrapper > .offer-btn,
+    section.offer > .btn-wrapper > .play-btn,
     section.expert > .btn-wrapper > .offer-bt,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         font-size: var(--fs-md);
     }
     section.offer > .btn-wrapper {
@@ -1281,8 +1281,8 @@ section.form .submit-btn .arrow img {
     section.steps h2 span {
         font-size: 54px;
     }
-    section.steps > .btn-wrapper > .offer-btn .arrow,
-    section.offer-red .btn-wrapper > .offer-btn .arrow{
+    section.steps > .btn-wrapper > .play-btn .arrow,
+    section.offer-red .btn-wrapper > .play-btn .arrow{
         width: calc(var(--fs-lg));
         height: calc(var(--fs-lg));
     }
@@ -1341,33 +1341,33 @@ section.form .submit-btn .arrow img {
     section.benefits > .title h2 span:nth-child(2) {
         padding-left: 0;
     }
-    section.benefits > .btn-wrapper > .offer-btn,
-    section.offer > .btn-wrapper > .offer-btn,
-    section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.benefits > .btn-wrapper > .play-btn,
+    section.offer > .btn-wrapper > .play-btn,
+    section.expert > .btn-wrapper > .play-btn,
+    section.steps > .btn-wrapper > .play-btn,
+    section.offer-red .btn-wrapper > .play-btn {
         text-align: center;
         gap: 25px;
         font-size: var(--fs-sm);
         padding-right: 10vw;
     }
-    section.benefits > .btn-wrapper > .offer-btn .arrow,
-    section.offer > .btn-wrapper > .offer-btn .arrow,
-    section.expert > .btn-wrapper > .offer-btn .arrow,
-    section.steps > .btn-wrapper > .offer-btn .arrow,
-    section.offer-red .btn-wrapper > .offer-btn .arrow{
+    section.benefits > .btn-wrapper > .play-btn .arrow,
+    section.offer > .btn-wrapper > .play-btn .arrow,
+    section.expert > .btn-wrapper > .play-btn .arrow,
+    section.steps > .btn-wrapper > .play-btn .arrow,
+    section.offer-red .btn-wrapper > .play-btn .arrow{
         width: 38px;
         height: 38px;
     }
-    section.benefits > .btn-wrapper > .offer-btn .arrow img,
-    section.offer > .btn-wrapper > .offer-btn .arrow,
-    section.expert > .btn-wrapper > .offer-btn .arrow,
-    section.steps > .btn-wrapper > .offer-btn .arrow,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.benefits > .btn-wrapper > .play-btn .arrow img,
+    section.offer > .btn-wrapper > .play-btn .arrow,
+    section.expert > .btn-wrapper > .play-btn .arrow,
+    section.steps > .btn-wrapper > .play-btn .arrow,
+    section.offer-red .btn-wrapper > .play-btn {
         width: 32px;
         height: 32px;
     }
-    section.benefits > .btn-wrapper > .offer-btn br.mobile {
+    section.benefits > .btn-wrapper > .play-btn br.mobile {
         display: block;
     }
     .confidence, .burnout {
