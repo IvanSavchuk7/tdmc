@@ -1,6 +1,5 @@
 
 header {
-    height: 100vh;
     background-image:
             url("../assets/images/index/bg-noise.png"),
             url("../assets/images/index/header-bg-author.webp"),
@@ -10,8 +9,96 @@ header {
             contain, 100% 100%;
     background-repeat: no-repeat;
     background-position: center, 100% 100%, center;
+    padding: 125px 5vw;
+    position: relative;
+}
+header .content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+header .content .clue {
+    color: #FFE8DE;
+    font-family: 'Benzin', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+header .content > .text {
+    padding-bottom: 15px;
+}
+header .content .guide-container {
+    padding: 15px 20px 15px 108px;
+    position: relative;
+    background: linear-gradient(180deg, rgba(251, 211, 183, 0.23) -30.64%, rgba(251, 211, 183, 0.04) 97.99%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    width: fit-content;
+}
+header .content .guide-container img {
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    width: 118px;
+    height: 154px;
+}
+.guide-container > .guide-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.guide-container > .guide-text > .guide-clue,
+.guide-container > .guide-text .guide-name {
+    font-size: var(--fs-xsm);
+}
+.guide-container > .guide-text .guide-name {
+    font-family: "Cabinet Grotesk Medium", sans-serif;
+}
+header .abs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
 }
 
+header .abs > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "title empty-1"
+    "empty-2 date-time";
+}
+
+.empty-1 {
+    grid-area: empty-1;
+}
+
+.empty-2 {
+    grid-area: empty-2;
+    border-right: 1px solid rgba(255, 255, 255, 0.20);
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+}
+header .abs > .container > div {
+    padding: 15px;
+}
+header .abs > .container div {
+    font-family: "Cabinet Grotesk Medium", sans-serif;
+}
+.abs > .container .title {
+    grid-area: title;
+    border-right: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.abs > .container .date-time {
+    grid-area: date-time;
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+}
 .shade {
     position: absolute;
     width: 100%;
@@ -55,13 +142,21 @@ h1 > span, h2 > span {
 h1 {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);
+    background: linear-gradient(
+            135deg,
+            #ff8a60 0%,
+            #fff4eb 20%,
+            #ffd7c2 40%,
+            #ffcbb0 60%,
+            #ffb191 80%,
+            #ff9970 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 h1 > span {
-    font-size: 100px;
+    font-size: 120px;
 }
 section.benefits h2 span:nth-child(2) {
     padding-left: 15%;
@@ -191,12 +286,20 @@ section.benefits h2 span:nth-child(2) {
     font-size: calc(var(--fs-md) - 6px);
     font-family: 'Cabinet Grotesk Medium', sans-serif;
 }
-section.benefits > .btn-wrapper {
+section.benefits > .btn-wrapper,
+header .btn-wrapper {
     display: flex;
     justify-content: center;
     align-items: stretch;
 }
-section.benefits > .btn-wrapper > .offer-btn-clue {
+header .btn-wrapper {
+    width: fit-content;
+}
+.btn-wrapper {
+    text-decoration: none !important;
+}
+section.benefits > .btn-wrapper > .offer-btn-clue,
+header .btn-wrapper > .offer-btn-clue {
     font-size: var(--fs-sm);
     font-family: 'Benzin', sans-serif;
     text-transform: uppercase;
@@ -209,11 +312,16 @@ section.benefits > .btn-wrapper > .offer-btn-clue {
     display: flex;
     align-items: center;
 }
+header .btn-wrapper > .offer-btn-clue {
+    border-left: none;
+    border-right: 2.5px solid rgba(255, 255, 255, 0.20);
+}
 section.benefits > .btn-wrapper > .offer-btn,
 section.offer > .btn-wrapper > .offer-btn,
 section.expert > .btn-wrapper > .offer-btn,
 section.steps > .btn-wrapper > .offer-btn,
-section.offer-red .btn-wrapper > .offer-btn {
+section.offer-red .btn-wrapper > .offer-btn,
+header .btn-wrapper > .offer-btn {
     background-image: url("../assets/images/waitlist/offer-btn-bg.webp");
     background-size: 105% 115%;
     background-repeat: no-repeat;
@@ -231,11 +339,15 @@ section.offer-red .btn-wrapper > .offer-btn {
     height: 100%;
     align-self: stretch;
 }
+header .btn-wrapper > .offer-btn {
+    background-size: 135% 125%;
+}
 section.benefits > .btn-wrapper > .offer-btn .arrow,
 section.offer > .btn-wrapper > .offer-btn .arrow,
 section.expert > .btn-wrapper > .offer-btn .arrow,
 section.steps > .btn-wrapper > .offer-btn .arrow,
-section.offer-red .btn-wrapper > .offer-btn .arrow {
+section.offer-red .btn-wrapper > .offer-btn .arrow,
+header .btn-wrapper > .offer-btn .arrow {
     width: calc(var(--fs-md) * 1.5);
     height: calc(var(--fs-md) * 1.5);
     background: white;
@@ -251,7 +363,14 @@ section.offer-red .btn-wrapper > .offer-btn .arrow img {
     width: 2.5vw;
     height: 2.5vw;
 }
-
+header .btn-wrapper > .offer-btn .arrow {
+    width: calc(var(--fs-md) * 2);
+    height: calc(var(--fs-md) * 2);
+}
+header .btn-wrapper > .offer-btn .arrow img {
+    width: 3vw;
+    height: 3vw;
+}
 section.for {
     background-image:
             url("../assets/images/index/bg-noise.png"),
@@ -787,6 +906,9 @@ section.form .submit-btn .arrow img {
         --fs-xsm: 26px;
 
     }
+    header {
+        padding: 100px 10vw;
+    }
     .mindset img {
         width: 6vw;
         height: 6vw;
@@ -816,7 +938,7 @@ section.form .submit-btn .arrow img {
         left: 10vw;
     }
     section.form .waitlist-form {
-        scale: 1.5;
+        scale: 1.25;
         gap: 50px;
     }
 }
@@ -855,8 +977,13 @@ section.form .submit-btn .arrow img {
         padding: 120px 50px;
     }
     section.form .waitlist-form {
-        scale: 1.35;
+        max-width: 30vw;
+        scale: 1.1;
         gap: 40px;
+    }
+    header {
+        background-position: center, 110% 100%, center;
+        padding: 100px 10vw;
     }
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
@@ -867,6 +994,9 @@ section.form .submit-btn .arrow img {
         --fs-md: 30px;
         --fs-sm: 24px;
         --fs-xsm: 22px;
+    }
+    header {
+        background-position: center, 120% 100%, center;
     }
     .mindset img {
         width: 8vw;
@@ -907,6 +1037,14 @@ section.form .submit-btn .arrow img {
         --fs-md: 28px;
         --fs-sm: 24px;
         --fs-xsm: 22px;
+    }
+    header {
+        background-position: center, 120% 100%, center;
+        padding: 75px 5vw;
+    }
+    header .abs {
+        left: 55%;
+        top: 35px;
     }
     .benefits-grid,
     section.for .content .item-container {
@@ -967,6 +1105,25 @@ section.form .submit-btn .arrow img {
     }
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
+    header {
+        background-position: center, 125% 100%, center;
+        padding: 75px 5vw;
+    }
+    h1 > span {
+        font-size: 90px;
+    }
+    header .abs {
+        left: 55%;
+        top: 35px;
+    }
+    header .content .guide-container {
+        padding: 15px 20px 15px 75px;
+    }
+    header .content .guide-container img {
+        left: -10px;
+        width: 75px;
+        height: 104px;
+    }
     .benefits-grid,
     section.for .content .item-container {
         padding: 0 5vw;
@@ -1169,6 +1326,65 @@ section.form .submit-btn .arrow img {
     section.form .waitlist-form input, section.form .waitlist-form input:active {
         padding: 10px 15px;
     }
+    header {
+        background-size: 125% 100%, contain, 200% 100%;
+        background-repeat: no-repeat;
+        background-position: center, top, 25% 100%;
+        padding: 100px 10vw 50px 10vw;
+    }
+    header .abs {
+        top: 10px;
+        width: 90%;
+    }
+    header .abs .container {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: stretch;
+        gap: 0 100px;
+        grid-template-areas:
+    "title empty-1 empty-2 date-time";
+    }
+    header .abs .container > div {
+        border: none;
+    }
+    header .abs .container .title {
+        border-right: 1px solid rgba(255, 255, 255, 0.20);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    }
+    header .abs .container .date-time {
+        border-left: 1px solid rgba(255, 255, 255, 0.20);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+        border-top: none;
+    }
+    header .content {
+        align-items: center;
+        margin-top: 50vw;
+    }
+    h1 > span {
+        text-align: center;
+        font-size: 80px;
+    }
+    header .content .guide-container {
+        padding: 10px 15px 10px 75px;
+    }
+    header .content .guide-container img {
+        left: -10px;
+        width: 75px;
+        height: 104px;
+    }
+    .guide-container > .guide-text {
+        gap: 5px;
+    }
+    header .btn-wrapper > .offer-btn .arrow {
+        width: calc(var(--fs-md) * 1.5);
+        height: calc(var(--fs-md) * 1.5);
+    }
+    header .btn-wrapper > .offer-btn-clue {
+        font-size: calc(var(--fs-sm) - 6px);
+        border-left: none;
+    }
 }
 @media screen and (max-width: 767px) {
     :root {
@@ -1345,6 +1561,9 @@ section.form .submit-btn .arrow img {
         padding: 20px;
         scale: 1;
     }
+    header .abs .container {
+        gap: 25px;
+    }
 }
 @media screen and (max-width: 479px) {
     :root {
@@ -1452,7 +1671,65 @@ section.form .submit-btn .arrow img {
     section.form .submit-btn {
         padding: 10px 5px;
     }
+    header {
+        padding: 25px 2vw;
+        background-image:
+                url("../assets/images/index/bg-noise.png"),
+                url("../assets/images/index/header-bg-author.webp"),
+                url("../assets/images/waitlist/header-bg-mobile.webp");
+        background-size: 200% 100%, 125% 70%, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center, top, center;
+    }
+    header .content {
+        align-items: flex-start;
+        margin-top: 80vw;
+    }
+    h1 > span {
+        text-align: left;
+        font-size: 64px;
+    }
+    header .content .clue,
+    .guide-container > .guide-text > .guide-clue {
+        font-size: 12px;
+    }
+    header .abs .container {
+        gap: 0;
+    }
+    header .abs > .container > div {
+        padding: 5px;
+    }
+    header .abs .container .title {
+        text-align: end;
+    }
+    header .content > .text,
+    .guide-container > .guide-text .guide-name {
+        font-size: 16px;
+    }
+    header .content > .text br {
+        display: none;
+    }
+    header .btn-wrapper {
+        width: 100%;
+    }
+    header .btn-wrapper > .offer-btn {
+        font-size: 18px;
+        padding: 12px 10px;
+    }
+    header .btn-wrapper > .offer-btn .arrow {
+        width: 24px;
+        height: 24px;
+    }
+    header .btn-wrapper > .offer-btn .arrow img {
+        width: 20px;
+        height: 20px;
+    }
+    header .btn-wrapper > .offer-btn-clue {
+        font-size: calc(var(--fs-xsm) - 6px);
+        border-left: none;
+    }
 }
+
 @media screen and (max-width: 365px) {
     section.offer > .title h2 span {
         font-size: calc(var(--fs-md) - 6px);
