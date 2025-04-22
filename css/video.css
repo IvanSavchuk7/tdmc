@@ -1,0 +1,620 @@
+section.start {
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/start/section-start-bg.webp");
+    background-size:
+            100% 100%,
+            100% 100%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 75px 10vw;
+}
+
+.title h1,
+.title h2,
+.title h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.start .title h1 {
+    padding-top: 25px;
+}
+.title h1 > span,
+.title h2 > span,
+.title h3 > span {
+    font-family: 'Benzin', sans-serif;
+    font-size: var(--fs-lg);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    text-transform: uppercase;
+}
+.title .clue-top {
+    margin: auto;
+    width: fit-content;
+    font-size: calc(var(--fs-sm));
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    border: 3px solid rgba(255, 255, 255, 0.40);
+    background: linear-gradient(180deg, rgba(174, 174, 174, 0.02) -30.64%, rgba(174, 174, 174, 0.00) 97.99%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 10px 40px;
+}
+section.start .content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+section.start .content .video-container {
+    border-radius: 8px;
+    border: 10px solid rgba(255, 255, 255, 0.20);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+}
+section.start .content .video-container iframe {
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+section.start .content .video-container iframe.normal-size {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+section.start .content .video-container .play {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #383838;
+    border-radius: 50%;
+}
+section.start .content .video-container .play img {
+    width: 100%;
+    height: 100%;
+}
+.play-btn {
+    width: fit-content;
+    background-image: url("../assets/images/start/offer-btn-bg.png");
+    background-size: 105% 115%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    font-size: var(--fs-md);
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 2.5px solid rgba(255, 255, 255, 0.20);
+    height: 100%;
+    align-self: stretch;
+}
+.play-btn > .arrow {
+    display: flex;
+    width: calc(var(--fs-md));
+    height: calc(var(--fs-md));
+}
+section.form {
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/start/section-form-bg.webp");
+    background-size:
+            100% 100%,
+            100% 110%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 100px 5vw 75px 5vw;
+}
+section.form .content {
+    display: flex;
+    gap: 20%;
+}
+section.form .content .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+section.form .content .left .text {
+    font-size: var(--fs-sm);
+}
+section.form .title h2,
+section.form .title h3 {
+    align-items: flex-start;
+}
+section.form .title h3 > span {
+    font-size: var(--fs-sm);
+}
+section.form .content .right {
+    flex: 1;
+}
+section.form .left > .bonuses {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+section.form .left > .bonuses > .bonus {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+section.form .left > .bonuses > .bonus img {
+    width: 85px;
+    height: 105px;
+}
+
+section.form .form-wrapper {
+    height: fit-content;
+    z-index: 1000;
+}
+section.form .waitlist-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #fff;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px;
+}
+
+section.form .waitlist-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-sm);
+    font-family: "Cabinet Grotesk Regular", sans-serif;
+    gap: 10px;
+    color: var(--color-ligghtgrey);
+}
+
+section.form .waitlist-form input,
+section.form .waitlist-form input:active {
+    width: 100%;
+    padding: 15px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 0;
+    font-size: 16px;
+    outline: none;
+    font-weight: 500;
+}
+
+section.form .waitlist-form input::placeholder:active {
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.07);;
+}
+section.form .waitlist-form label:nth-child(2) {
+    position: relative;
+}
+section.form .iti__country-list {
+    position: absolute;
+    max-width: 300px !important;
+    width: 15vw !important;
+    max-height: 300px !important;
+    left: 8%;
+    top: 0;
+    background: black !important;
+}
+
+section.form .submit-btn {
+    background: #FFFFFF;
+    color: black;
+    padding: 10px;
+    font-size: var(--fs-xsm);
+    font-family: 'Benzin', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section.form .submit-btn .arrow {
+    width: 36px;
+    height: 36px;
+    background: url("../assets/images/index/offer-btn-bg.webp");
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.form .submit-btn .arrow img {
+    width: 30px;
+    height: 30px;
+}
+.title h1.mobile,
+.title .clue-top.mobile {
+    display: none;
+}
+
+@media only screen and (min-width: 2560px) and (max-width: 3840px) {
+    :root {
+        --fs-lg: 80px;
+        --fs-md: 40px;
+        --fs-sm: 36px;
+        --fs-xsm: 30px;
+    }
+    section.start {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+    section.form {
+        padding: 125px 7.5vw;
+    }
+    section.form .content {
+        gap: 100px;
+    }
+    section.form .content .left {
+        flex: 2;
+    }
+    section.form .left > .bonuses > .bonus img {
+        width: 115px;
+        height: 135px;
+    }
+    section.form .waitlist-form {
+        gap: 40px;
+        padding: 50px 60px;
+    }
+    section.form .waitlist-form input, section.form .waitlist-form input:active {
+        font-size: var(--fs-xsm);
+    }
+    section.form .submit-btn {
+        justify-content: center;
+    }
+    section.form .submit-btn .arrow {
+        width: 48px;
+        height: 48px;
+    }
+
+    section.form .submit-btn .arrow img {
+        width: 42px;
+        height: 42px;
+    }
+}
+@media (min-width: 1920px) and (max-width: 2559px) {
+    :root {
+        --fs-xxlg: 68px;
+        --fs-xlg: 58px;
+        --fs-lg: 48px;
+        --fs-md: 32px;
+        --fs-sm: 28px;
+        --fs-xsm: 26px;
+    }
+    section.start .content .video-container {
+        width: 90%;
+    }
+    section.form {
+        padding: 100px 8vw 75px 8vw;
+    }
+    section.form .content {
+        gap: 10%;
+    }
+    section.form .content .left {
+        flex: 3;
+    }
+    section.form .content .right {
+         flex: 2;
+    }
+}
+@media (min-width: 1600px) and (max-width: 1919px) {
+    :root {
+        --fs-xxlg: 64px;
+        --fs-xlg: 54px;
+        --fs-lg: 58px;
+        --fs-md: 34px;
+        --fs-sm: 28px;
+        --fs-xsm: 24px;
+    }
+    section.form .content {
+        gap: 10%;
+    }
+    section.form .content .left {
+        flex: 3;
+    }
+    section.form .content .right {
+        flex: 2;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1599px) {
+    :root {
+        --fs-xxlg: 64px;
+        --fs-xlg: 54px;
+        --fs-lg: 48px;
+        --fs-md: 34px;
+        --fs-sm: 26px;
+        --fs-xsm: 22px;
+    }
+    section.start .content .video-container {
+        width: 95%;
+    }
+    section.form {
+        padding: 75px 5vw;
+    }
+    section.form .content {
+        gap: 50px;
+    }
+    section.form .content .left {
+        flex: 4;
+    }
+    section.form .content .right {
+        flex: 3;
+    }
+    section.form .waitlist-form {
+        padding: 30px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    :root {
+        --fs-xxlg: 64px;
+        --fs-xlg: 54px;
+        --fs-lg: 38px;
+        --fs-md: 26px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+    section.form {
+        padding: 75px 3vw;
+    }
+    section.form .content {
+        gap: 50px;
+    }
+    section.form .content .left {
+        flex: 4;
+        gap: 25px;
+    }
+    section.form .content .right {
+        flex: 3;
+    }
+    section.form .waitlist-form {
+        padding: 25px;
+    }
+    section.form .waitlist-form label {
+        font-size: var(--fs-xsm);
+    }
+    section.form .waitlist-form input, section.form .waitlist-form input:active {
+        padding: 10px 15px;
+    }
+    section.form .submit-btn {
+        padding: 10px 5px;
+    }
+    section.start .content .video-container {
+        border-width: 8px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    :root {
+        --fs-xxlg: 54px;
+        --fs-xlg: 46px;
+        --fs-lg: 42px;
+        --fs-md: 30px;
+        --fs-sm: 24px;
+        --fs-xsm: 22px;
+    }
+    .title h1 > span {
+        font-size: 34px;
+    }
+    section.start {
+        padding: 75px 3vw;
+        gap: 25px;
+    }
+    section.start .content {
+        gap: 25px;
+    }
+    section.form {
+        padding: 70px 5vw 70px 5vw;
+        background-size: 100% 100%, 150% 115%;
+        background-position: center, 35% 100%
+    }
+    section.form .content {
+        flex-direction: column;
+        gap: 50px;
+    }
+    section.form .content .left {
+        gap: 30px;
+    }
+    section.form .left > .bonuses > .bonus {
+        justify-content: center;
+    }
+    section.form .content .left > *:not(.title) {
+        margin: auto;
+    }
+    section.form .waitlist-form {
+        max-width: 550px;
+    }
+    section.start .content .video-container {
+        border-width: 5px;
+    }
+    .title .clue-top {
+        font-size: 14px;
+        padding: 20px 35px;
+    }
+}
+@media screen and (max-width: 1023px) {
+
+}
+@media screen and (max-width: 767px) {
+    :root {
+        --fs-xxlg: 54px;
+        --fs-xlg: 46px;
+        --fs-lg: 36px;
+        --fs-md: 24px;
+        --fs-sm: 20px;
+        --fs-xsm: 18px;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    :root {
+        --fs-xxlg: 54px;
+        --fs-xlg: 46px;
+        --fs-lg: 28px;
+        --fs-md: 20px;
+        --fs-sm: 18px;
+        --fs-xsm: 16px;
+    }
+    .title .clue-top {
+        font-size: 16px;
+    }
+    .title h1.mobile {
+        display: flex;
+    }
+    .title h1 > span {
+        font-size: var(--fs-lg);
+    }
+    .title h1:not(.mobile) {
+        display: none;
+    }
+    .play-btn {
+        padding: 10px;
+        gap: 10px;
+    }
+    section.form {
+        padding: 70px 3vw 70px 3vw;
+    }
+    section.form .content .left {
+        gap: 25px;
+    }
+    section.start .content .video-container {
+        border-width: 3px;
+    }
+    section.form {
+        background-size: 100% 100%, 200% 130%;
+        background-position: center, 50% 85%;
+    }
+    section.form .waitlist-form {
+        max-width: 100%;
+    }
+    section.form .content .left > .text {
+        text-align: center;
+    }
+    section.form .content .left > .text br {
+        display: none;
+    }
+    section.form .content .left > *:not(.title) {
+        margin: 0;
+    }
+    section.form .waitlist-form {
+        padding: 25px;
+    }
+    section.form .title h3 > span {
+        font-size: var(--fs-xsm);
+    }
+    section.form .submit-btn {
+        gap: 5px;
+    }
+    section.form .left > .bonuses > .bonus {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    section.form .waitlist-form input, section.form .waitlist-form input:active {
+        padding: 10px;
+    }
+    .title .clue-top {
+        padding: 15px 25px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    section.start {
+        background-size: 100% 100%, 250% 100%;
+        padding: 50px 3vw 75px 3vw;
+    }
+    section.form {
+        padding: 50px 3vw 50px 3vw;
+        background-image:
+                url("../assets/images/index/bg-noise.png"),
+                url("../assets/images/start/section-form-bg.webp");
+        background-size: 100% 100%, 200% 105%;
+        background-position: center, 58% 75%;
+        background-repeat: no-repeat;
+    }
+    .title .clue-top.mobile {
+        display: block;
+    }
+    .title .clue-top:not(.mobile) {
+        display: none;
+    }
+    section.form .content .left > .text {
+        text-align: left;
+    }
+    .title h2 {
+        align-items: flex-start;
+    }
+    section.start .content .video-container .play {
+        width: 75px;
+        height: 75px;
+    }
+    .play-btn {
+        border-width: 2px;
+    }
+    section.start .content .video-container iframe {
+        width: 300%;
+        margin-left: -100%;
+    }
+}
+@media screen and (max-width: 394px) {
+    .title h1 > span {
+        font-size: calc(var(--fs-lg) - 2px);
+    }
+    .play-btn {
+        font-size: calc(var(--fs-md) - 2px);
+    }
+    .play-btn > .arrow {
+        width: calc(var(--fs-md) - 2px);
+        height: calc(var(--fs-md) - 2px);
+    }
+}
+
+@media screen and (max-width: 379px) {
+    :root {
+        --fs-lg: 26px;
+        --fs-md: 18px;
+        --fs-sm: 16px;
+        --fs-xsm: 14px;
+    }
+    .title .clue-top {
+        padding: 15px 15px;
+    }
+    section.form .submit-btn .arrow {
+        width: 28px;
+        height: 28px;
+    }
+    section.form .submit-btn .arrow img {
+        width: 26px;
+        height: 26px;
+    }
+}
+@media screen and (max-width: 358px) {
+    :root {
+        --fs-lg: 22px;
+        --fs-md: 16px;
+        --fs-sm: 14px;
+        --fs-xsm: 14px;
+    }
+}

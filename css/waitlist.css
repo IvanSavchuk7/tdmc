@@ -1,4 +1,17 @@
 
+header {
+    height: 100vh;
+    background-image:
+            url("../assets/images/index/bg-noise.png"),
+            url("../assets/images/index/header-bg-author.webp"),
+            url("../assets/images/waitlist/header-bg.webp");
+    background-size:
+            100% 100%,
+            contain, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center, 100% 100%, center;
+}
+
 .shade {
     position: absolute;
     width: 100%;
@@ -14,7 +27,7 @@ section.benefits {
             url("../assets/images/waitlist/section-benefits-bg.webp");
     background-size:
             100% 100%,
-            110% 120%;
+            110% 100%;
     background-repeat: no-repeat;
     background-position: center, center;
     display: flex;
@@ -31,13 +44,24 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-h2 > span {
+h1 > span, h2 > span {
     font-family: 'Benzin', sans-serif;
     font-size: var(--fs-lg);
     font-style: normal;
     font-weight: 600;
     line-height: 125%;
     text-transform: uppercase;
+}
+h1 {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(98deg, #FFF -0.63%, #FFA28C 26.36%, #FFF 51.29%, #FFA28C 71.34%, #FFF 103.3%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1 > span {
+    font-size: 100px;
 }
 section.benefits h2 span:nth-child(2) {
     padding-left: 15%;
@@ -234,7 +258,7 @@ section.for {
             url("../assets/images/waitlist/section-for-bg.webp");
     background-size:
             100% 100%,
-            110% 120%;
+            110% 100%;
     background-repeat: no-repeat;
     background-position: center, center;
     display: flex;
