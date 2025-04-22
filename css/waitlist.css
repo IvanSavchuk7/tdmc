@@ -1433,7 +1433,6 @@ section.form .submit-btn .arrow img {
     .plus-bonus { grid-area: plus-bonus; }
     section.benefits > .btn-wrapper {
         flex-direction: column;
-        gap: 5px;
         padding: 0 5vw;
     }
     section.benefits > .btn-wrapper > .offer-btn-clue {
@@ -1477,7 +1476,7 @@ section.form .submit-btn .arrow img {
         gap: 15px;
     }
     section.offer {
-        background-size: 200% 150%, 220% 150%;
+        background-size: 200% 150%, 220% 100%;
         background-repeat: no-repeat;
         background-position: center, 65% 77%;
         padding: 50px 3vw;
@@ -1505,6 +1504,7 @@ section.form .submit-btn .arrow img {
                 url("../assets/images/waitlist/section-steps-bg.webp");
         background-size: 200% 50%, 200% 50%, 220% 100%;
         background-position: top, bottom, 70% 50%;
+        gap: 50px;
     }
     section.steps .content > .container {
         grid-auto-columns: 1fr;
@@ -1519,7 +1519,11 @@ section.form .submit-btn .arrow img {
         padding: 0 7.5vw;
     }
     section.steps h2 span {
-        font-size: 54px;
+        font-size: 64px;
+        text-align: center;
+    }
+    section.steps h2 span:last-child {
+        font-size: 16px;
     }
     section.steps > .btn-wrapper > .offer-btn .arrow,
     section.offer-red .btn-wrapper > .offer-btn .arrow{
@@ -1564,12 +1568,119 @@ section.form .submit-btn .arrow img {
     header .abs .container {
         gap: 25px;
     }
+    .benefits-grid > div[class] {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .benefits-grid > div > img {
+        width: 128px;
+        height: 128px;
+    }
+    .benefits-grid > div.confidence {
+        padding-right: 20vw;
+    }
+    .confidence .text, .burnout .text, .plus-bonus {
+        justify-content: center;
+        gap: 20px;
+    }
+    .monetize {
+        align-items: flex-start;
+        padding: 3vw;
+    }
+    .plus-bonus > .text {
+        font-size: var(--fs-md);
+    }
+    .plus-bonus > .plus {
+        padding: 7.5px 10px;
+        font-size: var(--fs-md);
+    }
+    section.for {
+        background-image: url(../assets/images/index/bg-noise.png), url(../assets/images/index/bg-noise.png), url(../assets/images/waitlist/section-for-bg.webp);
+        background-size: 250% 50%, 250% 50%, 350% 100%;
+        background-repeat: no-repeat;
+        background-position: top, bottom, 50% 100%;
+    }
+    section.offer-red {
+        background-size: 200% 100%, 250% 100%;
+    }
+    section.offer-red .content {
+        padding: 0;
+        border: 3px solid rgba(255, 255, 255, 0.30);
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+    section.offer-red .content > .left {
+        padding: 0 20px;
+        gap: 20px;
+        align-items: center;
+    }
+    section.offer-red .content > .right {
+        height: 30vh;
+        width: 100%;
+        aspect-ratio: 5 / 3;
+    }
+    section.offer-red .content h2 > span:not(.mobile) {
+        display: none;
+    }
+    section.offer-red .content h2 > span.mobile {
+        display: block;
+        font-size: 21px;
+    }
+    section.offer-red .btn-wrapper {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+    section.expert > .content {
+        padding: 0 10vw;
+        display: block;
+    }
+    section.expert > .content .img-container {
+        height: 400px;
+        max-width: 100%;
+        border-bottom: none;
+        margin-bottom: -3px;
+        margin-left: 0;
+    }
+    section.expert > .content .main-text-wrapper, section.expert > .content .bottom-text-wrapper {
+        border: 3px solid rgba(255, 255, 255, 0.20);
+        border-radius: 16px;
+        padding: 20px;
+        gap: 25px;
+    }
+    section.expert .list ul > li img {
+        width: 28px;
+        height: 28px;
+    }
+    section.expert > .content > .text {
+        gap: 0;
+    }
+    section.expert > .content .bottom-text-wrapper {
+        margin-top: -3px;
+    }
+    section.expert {
+        background-image:
+                url("../assets/images/index/bg-noise.png"),
+                url("../assets/images/index/bg-noise.png"),
+                url("../assets/images/waitlist/section-expert-bg.webp");
+        background-size: 250% 50%, 250% 50%, 300% 100%;
+        background-repeat: no-repeat;
+        background-position: top, bottom, 50% 100%;
+
+        gap: 25px;
+        padding: 50px 0;
+    }
+    section.expert h2 > span,
+    section.for h2 > span {
+        text-align: center;
+        font-size: var(--fs-xlg);
+    }
 }
 @media screen and (max-width: 479px) {
     :root {
         --fs-xxlg: 44px;
         --fs-xlg: 40px;
-        --fs-lg: 34px;
+        --fs-lg: 32px;
         --fs-md: 24px;
         --fs-sm: 20px;
         --fs-xsm: 18px;
@@ -1606,12 +1717,9 @@ section.form .submit-btn .arrow img {
     section.offer > .btn-wrapper > .offer-btn .arrow,
     section.expert > .btn-wrapper > .offer-btn .arrow,
     section.steps > .btn-wrapper > .offer-btn .arrow,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.offer-red .btn-wrapper > .offer-btn .arrow {
         width: 32px;
         height: 32px;
-    }
-    section.benefits > .btn-wrapper > .offer-btn br.mobile {
-        display: block;
     }
     .confidence, .burnout {
         padding: 4vw;
@@ -1623,8 +1731,8 @@ section.form .submit-btn .arrow img {
         display: block;
     }
     section.steps {
-        background-size: 200% 50%, 200% 50%, 220% 100%;
-        background-position: top, bottom, 70% 50%;
+        background-size: 200% 50%, 200% 50%, 450% 100%;
+        background-position: top, bottom, 60% 50%;
     }
     section.steps .container > div {
         padding: 30px 20px;
@@ -1655,7 +1763,7 @@ section.form .submit-btn .arrow img {
         padding: 20px 15px;
     }
     section.form {
-        background-size: 100% 100%, 250% 100%;
+        background-size: 200% 100%, 250% 100%;
         background-position: center, 70% 50%;
     }
     section.form .form-wrapper {
@@ -1670,6 +1778,7 @@ section.form .submit-btn .arrow img {
     }
     section.form .submit-btn {
         padding: 10px 5px;
+        font-size: 14px;
     }
     header {
         padding: 25px 2vw;
@@ -1728,11 +1837,107 @@ section.form .submit-btn .arrow img {
         font-size: calc(var(--fs-xsm) - 6px);
         border-left: none;
     }
+    .benefits-grid {
+        grid-template-rows: 1fr .8fr .8fr 1fr 1fr .8fr;
+    }
+    .benefits-grid > div > img {
+        width: 100px;
+        height: 100px;
+    }
+    body header .btn-wrapper {
+        padding: 2vw;
+        gap: 0;
+    }
+    body header .btn-wrapper > .offer-btn {
+        font-size: 16px;
+        gap:10px;
+        padding: 10px;
+    }
+    body header .btn-wrapper > .offer-btn .arrow {
+        width: 32px;
+        height: 32px;
+    }
+    section.benefits {
+        background-image: url(../assets/images/index/bg-noise.png), url(../assets/images/index/bg-noise.png), url(../assets/images/waitlist/section-benefits-bg.webp);
+        background-size: 250% 50%, 250% 50%, 350% 100%;
+        background-repeat: no-repeat;
+        background-position: top, bottom, 50% 100%;
+    }
+    section.steps .container .step-title {
+        gap: 20px;
+    }
+    section.offer-red .btn-wrapper > .offer-btn {
+        width: 100%;
+    }
+    section.register .content > div > div, section.register .content > div span {
+        font-size: 18px;
+    }
+    section.steps .content {
+        padding: 0 3vw;
+    }
+    section.steps .content > .container {
+        padding: 0;
+    }
+    section.expert .list ul > li img {
+        width: 24px;
+        height: 24px;
+    }
+    section.expert .list ul {
+        gap: 15px;
+    }
+    section.expert .list ul > li span, section.expert .list ul > li span b {
+        font-size: var(--fs-xsm);
+    }
+    section.expert > .content {
+        padding: 0 5vw;
+    }
+    section.expert > .content .img-container {
+        height: 300px;
+    }
+    section.expert > .btn-wrapper {
+        padding: 0 5vw;
+    }
+    section.expert > .btn-wrapper > .offer-btn {
+        padding-right: 10px;
+    }
+    section.expert {
+        background-size: 250% 50%, 250% 50%, 400% 100%;
+        background-position: top, bottom, 50% 100%;
+    }
 }
 
 @media screen and (max-width: 365px) {
     section.offer > .title h2 span {
         font-size: calc(var(--fs-md) - 6px);
+    }
+    h1 > span {
+        font-size: 54px;
+    }
+    header .content > .text, .guide-container > .guide-text .guide-name {
+        font-size: 14px;
+    }
+    header .btn-wrapper {
+        flex-direction: column-reverse;
+    }
+    header .btn-wrapper > .offer-btn-clue {
+        border-left: 2.5px solid rgba(255, 255, 255, 0.20);
+        border-bottom: none;
+        justify-content: center;
+    }
+    header .btn-wrapper > .offer-btn {
+        justify-content: center;
+    }
+    header .btn-wrapper > .offer-btn-clue br {
+        display: none;
+    }
+    body header .btn-wrapper > .offer-btn-clue {
+        border-bottom: none;
+    }
+    section.offer-red .content > .left {
+        padding: 0 10px;
+    }
+    section.register .content > div > div, section.register .content > div span {
+        font-size: 16px;
     }
 }
 
