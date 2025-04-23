@@ -100,13 +100,9 @@ header .abs > .container div {
     border-top: 1px solid rgba(255, 255, 255, 0.20);
 }
 .shade {
-    position: absolute;
-    width: 100%;
-    height: 10vh;
-    bottom: -5vh;
-    left: 0;
     background: #000000;
     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.76) 50%, rgba(0, 0, 0, 1) 70%);
+    display: none;
 }
 section.benefits {
     background-image:
@@ -1385,10 +1381,35 @@ section.form .submit-btn .arrow img {
         padding: 10px 15px;
     }
     header {
+        background-image:
+            url(../assets/images/index/bg-noise.png),
+            url(../assets/images/index/header-bg-author.webp),
+            url(../assets/images/waitlist/header-bg.webp);
         background-size: 125% 100%, contain, 200% 100%;
         background-repeat: no-repeat;
         background-position: center, top, 25% 100%;
         padding: 100px 10vw 50px 10vw;
+        position: relative;
+    }
+    header div.shade {
+        display: block;
+        position: absolute;
+        height: 20vh;
+        width: 100%;
+        background-image: url("../assets/images/index/section-join-shade.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        top: calc(75vw + 19vh);
+        left: 0;
+    }
+    header div.shade.reversed {
+        transform: rotate(180deg);
+        top: 75vw;
+    }
+    header .content > *:not(.shade) {
+        z-index: 555;
     }
     header .abs {
         top: 10px;
@@ -1488,6 +1509,13 @@ section.form .submit-btn .arrow img {
         --fs-md: 24px;
         --fs-sm: 20px;
         --fs-xsm: 18px;
+    }
+    header {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    header .text br {
+        display: none;
     }
     section.benefits {
         background-image:
@@ -1762,6 +1790,12 @@ section.form .submit-btn .arrow img {
         --fs-sm: 20px;
         --fs-xsm: 18px;
     }
+    header div.shade {
+        top: calc(100vw + 19vh);
+    }
+    header div.shade.reversed {
+        top: 100vw;
+    }
     .benefits-grid,
     section.for .content .item-container {
         padding: 0 5vw;
@@ -1797,6 +1831,9 @@ section.form .submit-btn .arrow img {
     section.offer-red .btn-wrapper > .offer-btn .arrow {
         width: 32px;
         height: 32px;
+    }
+    header .text br {
+        display: none;
     }
     .confidence, .burnout {
         padding: 4vw;
@@ -1892,10 +1929,13 @@ section.form .submit-btn .arrow img {
     header .abs .container .title {
         text-align: end;
     }
-    header .content > .text,
     .guide-container > .guide-text .guide-name {
         font-size: 16px;
-        padding: 0 5px;
+        padding: 10px 5px;
+    }
+    header .content > .text {
+        padding: 10px 5px;
+        font-size: 16px;
     }
     header .content > .text br {
         display: none;
@@ -1991,6 +2031,10 @@ section.form .submit-btn .arrow img {
     }
     header .content .guide-container {
         margin: auto;
+        padding: 7.5px 15px 7.5px 75px;
+    }
+    .guide-container > .guide-text {
+        gap: 0;
     }
 }
 
