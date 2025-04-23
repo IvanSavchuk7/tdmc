@@ -1876,9 +1876,12 @@ section.form .submit-btn .arrow img {
         text-align: left;
         font-size: 64px;
     }
-    header .content .clue,
     .guide-container > .guide-text > .guide-clue {
         font-size: 12px;
+    }
+    header .content .clue {
+        font-size: 13px;
+        font-weight: bold;
     }
     header .abs .container {
         gap: 0;
@@ -1892,6 +1895,7 @@ section.form .submit-btn .arrow img {
     header .content > .text,
     .guide-container > .guide-text .guide-name {
         font-size: 16px;
+        padding: 0 5px;
     }
     header .content > .text br {
         display: none;
@@ -1985,6 +1989,9 @@ section.form .submit-btn .arrow img {
     section.steps > .btn-wrapper {
         padding: 0 3vw;
     }
+    header .content .guide-container {
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 365px) {
@@ -2019,6 +2026,9 @@ section.form .submit-btn .arrow img {
     }
     section.register .content > div > div, section.register .content > div span {
         font-size: 16px;
+    }
+    header .content .clue {
+        font-size: 12px;
     }
 }
 
