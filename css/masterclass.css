@@ -1072,6 +1072,9 @@ section.form .submit-btn .arrow img {
     section.offer-red .btn-wrapper > .offer-btn {
         padding: 20px 40px;
     }
+    ection.steps > .btn-wrapper > .offer-btn {
+        font-size: calc(var(--fs-lg) - 10px);
+    }
     section.steps {
         padding: 75px 0;
     }
@@ -1128,6 +1131,9 @@ section.form .submit-btn .arrow img {
     }
     h1 > span {
         font-size: 90px;
+    }
+    ection.steps > .btn-wrapper > .offer-btn {
+        font-size: calc(var(--fs-lg) - 10px);
     }
     header .abs {
         left: 55%;
