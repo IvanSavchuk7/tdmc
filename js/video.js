@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const player = new Vimeo.Player(iframe);
 
     const playOverlay = document.querySelector(".video-container .play");
-    const playBtn = document.querySelector(".play-btn");
+    const playBtn = document.querySelector(".offer-btn");
 
     function playVideo() {
         player.play().then(() => {

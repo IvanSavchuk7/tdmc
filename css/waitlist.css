@@ -322,6 +322,7 @@ section.expert > .btn-wrapper > .offer-btn,
 section.steps > .btn-wrapper > .offer-btn,
 section.offer-red .btn-wrapper > .offer-btn,
 header .btn-wrapper > .offer-btn {
+    text-decoration: none;
     background-image: url("../assets/images/waitlist/offer-btn-bg.webp");
     background-size: 105% 115%;
     background-repeat: no-repeat;
@@ -469,6 +470,7 @@ section.offer > .btn-wrapper > .offer-btn,
 section.expert > .btn-wrapper > .offer-btn,
 section.steps > .btn-wrapper > .offer-btn,
 section.offer-red .btn-wrapper > .offer-btn {
+    text-decoration: none;
     width: fit-content;
     padding: 20px;
 }
@@ -867,6 +869,7 @@ section.form .iti__country-list {
 }
 
 section.form .submit-btn {
+    justify-content: center;
     background: #FFFFFF;
     color: black;
     padding: 10px;
@@ -1032,8 +1035,7 @@ section.form .submit-btn .arrow img {
 @media (min-width: 1366px) and (max-width: 1599px) {
     :root {
         --fs-xxlg: 64px;
-        --fs-xlg: 54px;
-        --fs-lg: 40px;
+        --fs-lg: 54px;
         --fs-md: 28px;
         --fs-sm: 24px;
         --fs-xsm: 22px;
@@ -1074,6 +1076,10 @@ section.form .submit-btn .arrow img {
     section.offer-red .btn-wrapper > .offer-btn {
         padding: 20px 40px;
     }
+    section.steps {
+        padding: 75px 0;
+    }
+
     section.steps .container {
         padding: 0 7.5vw;
     }
@@ -1091,10 +1097,10 @@ section.form .submit-btn .arrow img {
         padding: 20px;
     }
     section.offer-red .content {
-        padding: 75px 50px;
+        padding: 50px 30px;
     }
     section.offer-red h2 > span{
-        font-size: calc(var(--fs-lg) - 6px);
+        font-size: calc(var(--fs-lg) - 14px);
     }
     section.form .form-wrapper {
         left: 5vw;
@@ -1103,8 +1109,23 @@ section.form .submit-btn .arrow img {
         max-width: 40vw;
         scale: 1;
     }
+    section.offer-red .btn-wrapper > .offer-btn {
+        font-size: calc(var(--fs-lg) - 16px);
+        padding: 20px 30px;
+    }
+    section.offer-red .btn-wrapper > .offer-btn .arrow {
+        width: calc(var(--fs-lg));
+        height: calc(var(--fs-lg));
+    }
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
+    :root {
+        --fs-xxlg: 64px;
+        --fs-lg: 54px;
+        --fs-md: 28px;
+        --fs-sm: 24px;
+        --fs-xsm: 22px;
+    }
     header {
         background-position: center, 125% 100%, center;
         padding: 75px 5vw;
@@ -1123,6 +1144,17 @@ section.form .submit-btn .arrow img {
         left: -10px;
         width: 75px;
         height: 104px;
+    }
+    section.offer-red h2 > span {
+        font-size: calc(var(--fs-lg) - 22px);
+    }
+    section.offer-red .btn-wrapper > .offer-btn {
+        font-size: calc(var(--fs-lg) - 20px);
+        padding: 15px;
+    }
+    section.offer-red .btn-wrapper > .offer-btn .arrow {
+        width: calc(var(--fs-lg));
+        height: calc(var(--fs-lg));
     }
     .benefits-grid,
     section.for .content .item-container {
@@ -1156,8 +1188,7 @@ section.form .submit-btn .arrow img {
         height: 24px;
     }
     section.expert > .btn-wrapper > .offer-btn,
-    section.steps > .btn-wrapper > .offer-btn,
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.steps > .btn-wrapper > .offer-btn {
         padding: 20px 40px;
     }
     section.steps .container {
@@ -1195,6 +1226,30 @@ section.form .submit-btn .arrow img {
     }
     section.form .waitlist-form input, section.form .waitlist-form input:active {
         padding: 10px 15px;
+    }
+    section.offer h2 > span {
+        font-size: 36px;
+    }
+    section.steps {
+        padding: 75px 0;
+    }
+    section.offer-red {
+        padding: 50px 2vw;
+    }
+    section.register {
+        padding: 75px 0;
+        gap: 50px;
+    }
+    section.for .content .item-container > div.item {
+        flex-wrap: wrap;
+        min-width: 450px;
+    }
+    section.for div.item > div:last-child {
+        font-size: 20px;
+        padding: 15px 15px 30px 15px;
+    }
+    .benefits-grid, section.for .content .item-container {
+        padding: 0 3.5vw;
     }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1290,6 +1345,9 @@ section.form .submit-btn .arrow img {
         padding: 25px;
         scale: 1;
     }
+    section.offer-red {
+        padding: 50px 5vw;
+    }
 }
 @media screen and (max-width: 1023px) {
     section.offer {
@@ -1384,6 +1442,42 @@ section.form .submit-btn .arrow img {
     header .btn-wrapper > .offer-btn-clue {
         font-size: calc(var(--fs-sm) - 6px);
         border-left: none;
+    }
+    section.register {
+        padding: 75px 0;
+        gap: 50px;
+    }
+    section.offer-red .content {
+        padding: 0 0 25px 0;
+        border: 3px solid rgba(255, 255, 255, 0.30);
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+    section.offer-red .content > .left {
+        padding: 0 20px;
+        gap: 20px;
+        align-items: center;
+    }
+    section.offer-red .content > .right {
+        height: 30vh;
+        width: 100%;
+        aspect-ratio: 5 / 3;
+    }
+    section.offer-red .content h2 > span:not(.mobile) {
+        display: none;
+    }
+    section.offer-red .content h2 > span.mobile {
+        text-align: center;
+        display: block;
+        font-size: 42px;
+    }
+    section.offer-red .btn-wrapper > .offer-btn {
+        width: 100%;
+    }
+    section.offer-red .btn-wrapper {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
     }
 }
 @media screen and (max-width: 767px) {
@@ -1590,6 +1684,9 @@ section.form .submit-btn .arrow img {
     .plus-bonus > .text {
         font-size: var(--fs-md);
     }
+    section.offer-red .content h2 > span.mobile {
+        font-size: 28px;
+    }
     .plus-bonus > .plus {
         padding: 7.5px 10px;
         font-size: var(--fs-md);
@@ -1602,34 +1699,6 @@ section.form .submit-btn .arrow img {
     }
     section.offer-red {
         background-size: 200% 100%, 250% 100%;
-    }
-    section.offer-red .content {
-        padding: 0 0 25px 0;
-        border: 3px solid rgba(255, 255, 255, 0.30);
-        flex-direction: column-reverse;
-        gap: 25px;
-    }
-    section.offer-red .content > .left {
-        padding: 0 20px;
-        gap: 20px;
-        align-items: center;
-    }
-    section.offer-red .content > .right {
-        height: 30vh;
-        width: 100%;
-        aspect-ratio: 5 / 3;
-    }
-    section.offer-red .content h2 > span:not(.mobile) {
-        display: none;
-    }
-    section.offer-red .content h2 > span.mobile {
-        display: block;
-        font-size: 21px;
-    }
-    section.offer-red .btn-wrapper {
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
     }
     section.expert > .content {
         padding: 0 10vw;
@@ -1674,6 +1743,14 @@ section.form .submit-btn .arrow img {
     section.for h2 > span {
         text-align: center;
         font-size: var(--fs-xlg);
+    }
+    section.steps,
+    section.for,
+    section.benefits {
+        padding: 50px 0;
+    }
+    section.offer-red {
+        padding: 50px 5vw;
     }
 }
 @media screen and (max-width: 479px) {
@@ -1741,7 +1818,8 @@ section.form .submit-btn .arrow img {
     section.register {
         background-size: 200% 100%, 250% 100%;
         background-position: center, 60% 50%;
-        padding: 100px 0 70px 0;
+        padding: 50px 0 50px 0;
+        gap: 50px;
     }
     section.register h2 span {
         font-size: var(--fs-lg);

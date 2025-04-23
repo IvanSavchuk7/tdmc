@@ -168,31 +168,31 @@ header .content .benefits > .list img {
     width: 17px;
     height: 17px;
 }
-header .content .play-btn,
-.section-why .content .play-btn {
+header .content .offer-btn,
+.section-why .content .offer-btn {
     padding: var(--fs-xsm);
     background: url("../assets/images/index/offer-btn-bg.webp") lightgray 50% / cover no-repeat;
     border: 3px solid rgb(220, 162, 162);
 }
-header .content .play-btn a,
-.section-why .content .play-btn a {
+header .content .offer-btn a,
+.section-why .content .offer-btn a {
     text-decoration: none;
     display: flex;
     flex-direction: column;
 }
-header .content .play-btn span:first-child,
-.section-why .content .play-btn span:first-child {
+header .content .offer-btn span:first-child,
+.section-why .content .offer-btn span:first-child {
     display: flex;
     width: 100%;
     justify-content: flex-end;
 }
-header .content .play-btn span:first-child img,
-.section-why .content .play-btn span:first-child img {
+header .content .offer-btn span:first-child img,
+.section-why .content .offer-btn span:first-child img {
     width: 2.5vw;
     height: 2.5vw;
 }
-header .content .play-btn span,
-.section-why .content .play-btn span {
+header .content .offer-btn span,
+.section-why .content .offer-btn span {
     font-family: 'Benzin', sans-serif;
     font-size: var(--fs-md);
     font-style: normal;
@@ -201,7 +201,7 @@ header .content .play-btn span,
     letter-spacing: -0.832px;
     text-transform: uppercase;
 }
-.play-btn.mobile {
+.offer-btn.mobile {
     display: none;
 }
 .section-why {
@@ -420,22 +420,22 @@ header .content .play-btn span,
     color: var(--color-ligghtgrey) !important;
     padding: 0 10px 0 35px;
 }
-.section-why .content .play-btn {
+.section-why .content .offer-btn {
     width: 21vw;
     position: absolute;
     bottom: 7.5%;
     left: calc(50% - 10.5vw);
 }
-.section-why .content .play-btn a {
+.section-why .content .offer-btn a {
     justify-content: space-between;
     flex-direction: row-reverse;
     gap: 25px;
     align-items: center;
 }
-.section-why .content .play-btn span:first-child {
+.section-why .content .offer-btn span:first-child {
     width: 2.5vw;
 }
-.section-why .content .play-btn span:last-child {
+.section-why .content .offer-btn span:last-child {
     font-weight: bold;
 }
 .section-why .container.mobile {
@@ -673,7 +673,7 @@ header .content .play-btn span,
     .swiper-pagination > .swiper-pagination-bullet {
         height: 10px !important;
     }
-    .section-why .content .play-btn {
+    .section-why .content .offer-btn {
         bottom: 3.5%;
         width: 30vw;
         left: calc(50% - 15vw);
@@ -716,19 +716,19 @@ header .content .play-btn span,
         padding-top: 7.5vh;
         align-items: flex-end;
     }
-    header .content .play-btn {
+    header .content .offer-btn {
         padding: 12px;
     }
-    header .content .play-btn a {
+    header .content .offer-btn a {
         flex-direction: row-reverse;
         align-items: center;
         gap: 10px;
     }
-    header .content .play-btn span:first-child {
+    header .content .offer-btn span:first-child {
         width: fit-content;
         font-size: calc(var(--fs-md) - 4px);
     }
-    header .content .play-btn a span:last-child br {
+    header .content .offer-btn a span:last-child br {
         display: none;
     }
 }
@@ -760,15 +760,15 @@ header .content .play-btn span,
     header .content .benefits {
         width: fit-content;
     }
-    header .content .play-btn a {
+    header .content .offer-btn a {
         flex-direction: row-reverse;
         align-items: center;
         gap: 10px;
     }
-    header .content .play-btn span:first-child {
+    header .content .offer-btn span:first-child {
         width: fit-content;
     }
-    header .content .play-btn a span:last-child br {
+    header .content .offer-btn a span:last-child br {
         display: none;
     }
     .section-why .container .a, .section-why .container .b, .section-why .container .c, .section-why .container .d {
@@ -836,7 +836,7 @@ header .content .play-btn span,
     header .content .right {
         gap: 25px;
     }
-    .section-why .content .play-btn {
+    .section-why .content .offer-btn {
         width: 30vw;
         left: calc(50% - 15vw);
     }
@@ -872,14 +872,14 @@ header .content .play-btn span,
     header .content .benefits {
         width: fit-content;
     }
-    header .content .play-btn a {
+    header .content .offer-btn a {
         flex-direction: row-reverse;
         gap: 10px;
     }
-    header .content .play-btn span:first-child {
+    header .content .offer-btn span:first-child {
         width: fit-content;
     }
-    header .content .play-btn a span:last-child br {
+    header .content .offer-btn a span:last-child br {
         display: none;
     }
     .section-why .container .a, .section-why .container .b, .section-why .container .c, .section-why .container .d {
@@ -958,7 +958,7 @@ header .content .play-btn span,
         padding-right: 5px;
         gap: 15vw;
     }
-    .section-why .content .play-btn {
+    .section-why .content .offer-btn {
         width: 45vw;
         left: calc(50% - 22.5vw);
     }
@@ -968,7 +968,7 @@ header .content .play-btn span,
     .section-why .container .d > span > span {
         font-size: var(--fs-xsm);
     }
-    .section-why .content .play-btn {
+    .section-why .content .offer-btn {
         width: 35vw;
         left: calc(50% - 17.5vw);
     }
@@ -1136,13 +1136,13 @@ header .content .play-btn span,
     header .content .offer-text br {
         display: none;
     }
-    header .content .play-btn a {
+    header .content .offer-btn a {
         flex-direction: row-reverse;
     }
     header .content .offer-clue {
         margin-bottom: 10px;
     }
-    .section-why .content .play-btn:not(.mobile) {
+    .section-why .content .offer-btn:not(.mobile) {
         display: none;
     }
     .section-why .container.desktop {
@@ -1237,24 +1237,24 @@ header .content .play-btn span,
     .container .a .discount br {
         display: none;
     }
-    .section-why .content .play-btn.mobile {
+    .section-why .content .offer-btn.mobile {
         display: block;
         position: initial;
         width: 90%;
         margin: 25px auto;
     }
-    .play-btn a {
+    .offer-btn a {
         justify-content: space-between;
         flex-direction: row-reverse;
     }
-    .play-btn span:first-child img {
+    .offer-btn span:first-child img {
         width: 10vw !important;
         height: 10vw !important;
     }
-    .play-btn span:first-child {
+    .offer-btn span:first-child {
         width: 10vw !important;
     }
-    .play-btn span:last-child {
+    .offer-btn span:last-child {
         font-size: 6vw;
         font-weight: bold;
     }
@@ -1326,10 +1326,10 @@ header .content .play-btn span,
     .swiper-pagination-bullet {
         height: 8px !important;
     }
-    .section-why .content .play-btn:not(.mobile) {
+    .section-why .content .offer-btn:not(.mobile) {
         display: none;
     }
-    header .content .play-btn span, .section-why .content .play-btn span {
+    header .content .offer-btn span, .section-why .content .offer-btn span {
         font-size: var(--fs-lg);
     }
     .waitlist-form input {
