@@ -13,7 +13,7 @@ checkboxes.forEach(checkbox => {
 
 // 3. Main form logic
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("waitlist-form");
+    const form = document.getElementById("masterclass-form");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();

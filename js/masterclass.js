@@ -1,29 +1,3 @@
-var swiper1 = new Swiper(".feedback-swiper", {
-    slidesPerView: 1,
-    lazy: true,
-    autoHeight: false,
-    spaceBetween: 20,
-    centeredSlides: true,
-    direction: 'horizontal',
-    loop: true,
-
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-const input = document.querySelector("#phone");
-
-const iti = window.intlTelInput(input, {
-    initialCountry: "us",
-    preferredCountries: ["ua", "us", "pl"],
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-    nationalMode: false,
-});
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("masterclass-form");
 
@@ -41,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form);
 
-        fetch("https://script.google.com/macros/s/AKfycbzQnAbGx9k7TYnq7CFn-r_KPyNn-8Ig2QO5fIxkaPRz9ZQX815ZEcdd2cF23chXYg/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbx577BpBcdMzzas2pBQp0Wybtf3xfrz3OKfi0a_0K2X0wi8mE-2xC6Lcy9TteyTikJG/exec", {
             method: "POST",
             body: formData
         })
@@ -57,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     arrowDiv.style.display = "block";
                     loader.style.display = "none";
-                    arrowDiv.src = "assets/images/checkmark.svg"; // ✅ Your checkmark icon
+                    arrowDiv.src = "../assets/images/index/checkmark.svg"; // ✅ Your checkmark icon
                     arrowOuter.style.background = "none";
                     setTimeout(() => {
-                        window.location.href = "https://tdmceducation.com/join";
+                        window.location.href = "../video/join/";
                     }, 500);
                     submitBtn.classList.add("submitted");
                 }
@@ -83,10 +57,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    // Check if device is mobile
-    if (window.innerWidth <= 768) {
-        window.scrollTo(0, 25);
-    }
 });

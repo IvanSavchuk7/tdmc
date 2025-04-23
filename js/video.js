@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("waitlist-form");
+    const form = document.getElementById("masterclass-form");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
