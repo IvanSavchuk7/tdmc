@@ -1253,6 +1253,16 @@ section.form .submit-btn .arrow img {
     .benefits-grid, section.for .content .item-container {
         padding: 0 3.5vw;
     }
+    section.steps > .btn-wrapper > .offer-btn, section.offer-red .btn-wrapper > .offer-btn {
+        font-size: var(--fs-md);
+    }
+    section.steps > .btn-wrapper > .offer-btn .arrow, section.offer-red .btn-wrapper > .offer-btn .arrow {
+    width: calc(var(--fs-md)* 1.5);
+    height: calc(var(--fs-md)* 1.5);
+    }
+    section.expert > .btn-wrapper > .offer-btn, section.steps > .btn-wrapper > .offer-btn {
+        padding: 20px 30px;
+    }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     :root {
@@ -1349,16 +1359,6 @@ section.form .submit-btn .arrow img {
     }
     section.offer-red {
         padding: 50px 5vw;
-    }
-    section.steps > .btn-wrapper > .offer-btn, section.offer-red .btn-wrapper > .offer-btn {
-        font-size: var(--fs-md);
-    }
-    section.steps > .btn-wrapper > .offer-btn .arrow, section.offer-red .btn-wrapper > .offer-btn .arrow {
-    width: calc(var(--fs-md)* 1.5);
-    height: calc(var(--fs-md)* 1.5);
-    }
-    section.expert > .btn-wrapper > .offer-btn, section.steps > .btn-wrapper > .offer-btn {
-        padding: 20px 30px;
     }
 }
 @media screen and (max-width: 1023px) {
