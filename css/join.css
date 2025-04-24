@@ -125,6 +125,42 @@ main .content .whatsapp-btn div:first-child img {
     width: 32px;
     height: 32px;
 }
+.loader {
+    /* color of choise */
+    --clr: #05A8AA;
+    /* loading time of choice */
+    --load-time: 2s;
+    outline: 1px solid rgb(220, 162, 162);
+    outline-offset: 5px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5rem;
+    margin: auto;
+    padding: 4px 0;
+    width: 70%;
+}
+
+.loader.loaded::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(98deg, #FFF -0.63%, #FCFFCC 26.36%, #FFF 51.29%, #DFE3A8 71.34%, #FFF 103.3%);;
+    z-index: 2;
+    animation: loading var(--load-time) ease-in-out forwards;
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
 @media only screen and (min-width: 1100px) and (max-width: 1439px) {
     main .content {
         width: 75vw;
@@ -208,6 +244,21 @@ main .content .whatsapp-btn div:first-child img {
     }
     main .content .whatsapp-btn {
         margin: 0;
+    }
+    .loader {
+        padding: 3px 0;
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .loader {
+        padding: 3px 0;
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    main .content .title {
+        font-size: 28px;
     }
 }
 
