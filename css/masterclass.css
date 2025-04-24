@@ -1108,11 +1108,14 @@ section.form .submit-btn .arrow img {
         max-width: 40vw;
         scale: 1;
     }
-    section.offer-red .btn-wrapper > .offer-btn {
+    section.offer-red .btn-wrapper > .offer-btn,
+    section.steps .btn-wrapper > .offer-btn
+    {
         font-size: calc(var(--fs-lg) - 16px);
         padding: 20px 30px;
     }
-    section.offer-red .btn-wrapper > .offer-btn .arrow {
+    section.offer-red .btn-wrapper > .offer-btn .arrow,
+    section.steps .btn-wrapper > .offer-btn .arrow {
         width: calc(var(--fs-lg));
         height: calc(var(--fs-lg));
     }
