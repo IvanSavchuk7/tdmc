@@ -958,6 +958,10 @@ header .content .offer-btn span,
     .section-why .content .offer-btn {
         bottom: 1%;
     }
+    .section-why .content .offer-btn span:last-child {
+    font-weight: bold;
+    font-size: 1rem;
+    }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1439px) {
     header {
@@ -1713,6 +1717,7 @@ header .content .offer-btn span,
         background-position: 0 60vh, 50% 15%, center 0, center 100%, 0 0, 143% 0, 0 0 !important;
     }
 }
+
 
 
 
